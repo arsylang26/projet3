@@ -1,5 +1,6 @@
 <?php
 require_once 'Controleur/ControleurAccueil.php';
+require_once 'Controleur/ControleurCommentaire.php';
 require_once 'Controleur/ControleurEpisode.php';
 require_once 'Controleur/ControleurAdministration.php';
 require_once 'Vue/Vue.php';
@@ -13,8 +14,10 @@ class Routeur
     public function __construct()
     {
         $this->ctrlAccueil = new ControleurAccueil();
+        $this->ctrlCommentaire = new ControleurCommentaire();
         $this->ctrlEpisode = new ControleurEpisode();
         $this->ctrlAdministration = new ControleurAdministration();
+        
     }
 
     // Route une requête entrante : exécution l'action associée
@@ -28,7 +31,8 @@ class Routeur
                         $this->ctrlEpisode->episode($idEpisode);
                     } else
                         throw new Exception("Identifiant de l'épisode non valide");
-                } elseif ($_GET['action'] == 'commenter') {
+                } 
+                elseif ($_GET['action'] == 'commenter') {
                     $auteur = $this->getParametre($_POST, 'auteur');
                     $contenu = $this->getParametre($_POST, 'contenu');
                     $idEpisode = $this->getParametre($_POST, 'id');
@@ -46,6 +50,10 @@ class Routeur
                 }
                 elseif($_GET['action']=='administration'){
                     $this->ctrlAdministration->administration();
+                }
+                elseif($_GET['action'])=='delCommentairesAbusifs'{
+                    $id = $this->getParametre($_POST,'id');
+                    $this->ctrlCommentaire->delCommentaire($id);
                 }
                 else
                     throw new Exception("Action non valide");

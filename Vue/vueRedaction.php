@@ -1,4 +1,4 @@
-
+<?php $this->titre="Alaska: nouvel épisode"; ?>
         <form class="col-lg-offset-1 col-lg-10" method="POST" action="index.php?action=recEpisode">
             <div class ="form-group"> 
                 <label for="titre">Titre de l'épisode :</label>

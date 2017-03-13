@@ -20,10 +20,11 @@ class ControleurEpisode
         $vue->generer(array('episode' => $episode, 'commentaires' => $commentaires));
     }
     // Ajoute un commentaire à un épisode
-    public function commenter($auteur, $contenu, $idEpisode)
+    public function commenter($date, $auteur, $contenu, $idEpisode,$rangCommentaire,$parentCommentaire)
     {
         // Sauvegarde du commentaire
-        $this->commentaire->ajouterCommentaire($auteur, $contenu, $idEpisode);
+
+        $this->commentaire->ajouterCommentaire($date, $auteur, $contenu, $idEpisode,$rangCommentaire,$parentCommentaire);
         // Actualisation de l'affichage du billet
         $this->episode($idEpisode);
     }
