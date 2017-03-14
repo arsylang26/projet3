@@ -37,5 +37,13 @@ class ControleurAdministration
         $vue = new Vue("AccueilCommentaireAbusif");
         $vue->generer(array('commentaires' => $commentaireAbusif));
     }
+    public function modifEpisode($id)
+    {
+        
+    }
+    public function supprEpisode($id)
+    {
+        
+    }
 
 }

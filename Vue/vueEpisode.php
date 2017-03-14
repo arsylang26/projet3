@@ -14,7 +14,7 @@
 // affichage en décalé des niveaux de commentaires avec possibilité de commenter le commentaire ou de le signaler comme abusif
 <div class="container">
     <ul class="media-list col-lg-7">
-<?php function  dispLigneeCommentaire($commentaire)
+<?php function  dispLigneeCommentaire($commentaire,$rangCommentaire,$parentCommentaire)
     {
     foreach ($commentaire as $lignee)
         {
@@ -25,8 +25,11 @@
             echo'</div>';
         
  
-            <?=<a class="btn btn-success" href="Vue/vueSaisieCommentaire.php">commenter</a> ?>;
-            <?=<button type="button" class="btn btn-warning">abusif</button> ?>;
+            <?=<a class="btn btn-success" href="index.php?action=commenter">commenter</a> ?>;
+            if($rangCommentaire>0)
+            {
+                <?=<button type="button" class="btn btn-warning">abusif</button> ?>;
+            }
         }
     }
 ?>
