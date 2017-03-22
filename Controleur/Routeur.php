@@ -27,11 +27,7 @@ class Routeur
     {
         try {
             if (isset($_GET['action'])) {
-<<<<<<< HEAD
                 switch ($_GET['action']) {
-=======
-                switch ($_GET(['action'])) {
->>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
                     case 'episode': //pour affichage épisode
                         $idEpisode = intval($this->getParametre($_GET, 'id'));
                         if ($idEpisode != 0) {
@@ -39,11 +35,7 @@ class Routeur
                         } else throw new Exception("Identifiant de l'épisode non valide");
                         break;
 
-<<<<<<< HEAD
                     case 'creerEpisode': //pour enregistrer un épisode
-=======
-                    case 'recEpisode': //pour enregistrer un épisode
->>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
                         if (isset ($_POST['titre'])) {
                             $titre = $this->getParametre($_POST, 'titre');
                             $contenu = $this->getParametre($_POST, 'contenu');
@@ -53,11 +45,7 @@ class Routeur
                         }
                         break;
 
-<<<<<<< HEAD
                     case 'modifEpisode': //pour modifier un épisode
-=======
-                    case 'modEpisode': //pour modifier un épisode
->>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
                         $id = $this->getParametre($_POST, 'id');
                         $this->ctrlAdministration->modEpisode($id);
                         break;
@@ -67,7 +55,6 @@ class Routeur
                         $this->ctrlAdministration->delEpisode($id);
                         break;
 
-<<<<<<< HEAD
                     case 'commenterEpisode': //pour commenter un épisode
                         $auteur = $this->getParametre($_POST, 'auteur');
                         $contenu = $this->getParametre($_POST, 'contenu');
@@ -86,15 +73,6 @@ class Routeur
                     case 'signalerAbusif': // pour signaler un commentaire abusif
                         $id = $this->getParametre($_POST,'id');
                         $this->ctrlCommentaire->signCommentaireAbusif($id);
-=======
-                    case 'commenter': //pour commenter un épisode ou un commentaire
-                        $auteur = $this->getParametre($_POST, 'auteur');
-                        $contenu = $this->getParametre($_POST, 'contenu');
-                        $idEpisode = $this->getParametre($_POST, 'id');
-                        $rangCommentaire = $this->getParametre($_POST, 'rang');
-                        $parentCommentaire = $this->getParametre($_POST, 'parent');
-                        $this->ctrlCommentaire->commenter($auteur, $contenu, $idEpisode, $rangCommentaire, $parentCommentaire);
->>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
                         break;
 
                     case 'administration': //interface privée
@@ -103,7 +81,6 @@ class Routeur
 
                     case 'supprCommentaire'://pour supprimer un commentaire et ses enfants( sous-commentaires)
                         $id = $this->getParametre($_POST, 'id');
-<<<<<<< HEAD
                         $this->ctrlAdministration->delCommentaire($id);
                         break;
                         
@@ -113,9 +90,6 @@ class Routeur
                         
                     case 'gestionEpisode': //gère l'affichage des épisodes en mode administration 
                         $this->ctrlAdministration->adminEpisode();
-=======
-                        $this->ctrlCommentaire->delCommentaire($id);
->>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
                         break;
 
                     default:

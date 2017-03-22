@@ -11,7 +11,7 @@
         <p><?= $episode['contenu'] ?></p>
     </article>
 <!-- afficher les boutons d'administration uniquement dans ce mode  -jquery-->
-<div class="admin" style="display:none";>
+<div class="admin" style="display:none;">
     
             <a type="button" class="btn btn-primary btn-sm btn-block" href="index.php?action=creerEpisode">écrire un épisode</a>
             <a type="button" class="btn btn-primary btn-sm btn-block" href="index.php?action=supprEpisode">supprimer un épisode</a>

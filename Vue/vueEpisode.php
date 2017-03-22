@@ -13,7 +13,6 @@
 </header>
 <!-- affichage en décalé des niveaux de commentaires avec possibilité de commenter le commentaire ou de le signaler comme abusif-->
 <div class="container">
-<<<<<<< HEAD
 
     <?php function dispLigneeCommentaire($commentaires, $modele)
     {
@@ -51,7 +50,13 @@
           
             echo '</div>';
             echo '</div>';
+            
+        }
+    }
 
+    dispLigneeCommentaire($commentaires, $modeleCommentaire);
+
+    ?>
 
 </div>
 

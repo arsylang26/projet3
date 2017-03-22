@@ -13,7 +13,7 @@ function confirmerSuppr()
 });
 
 // masquer la zone de saisie au clic sur envoyer ou annuler ou abusif
- §("#envoyerComm,#annulerComm,#abusifComm").click(function()
+ $("#envoyerComm,#annulerComm,#abusifComm").click(function()
 {
    $(".commentaire_form").hide();
 });
