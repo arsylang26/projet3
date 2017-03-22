@@ -12,8 +12,11 @@ function confirmerSuppr()
    $(".commentaire_form").show();
 });
 
-// masquer la zone de saisie au clic sur envoyer ou annuler
+// masquer la zone de saisie au clic sur envoyer ou annuler ou abusif
  §("#envoyerComm,#annulerComm,#abusifComm").click(function()
 {
    $(".commentaire_form").hide();
 });
+
+// afficher les boutons d'administration uniquement dans ce mode
+//$(".admin") ??

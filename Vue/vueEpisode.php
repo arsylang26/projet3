@@ -51,32 +51,7 @@
           
             echo '</div>';
             echo '</div>';
-            
-=======
-    <ul class="media-list col-lg-7">
-<?php function  dispLigneeCommentaire($commentaire,$rangCommentaire,$parentCommentaire)
-    {
-    foreach ($commentaire as $lignee)
-        {
-            echo'<div class="media-body">';
-            echo'<p><?= $commentaire['date']." ".$commentaire['auteur'] a dit : ?></p>';
-            echo'<p><?= $commentaire['contenu']?></p>;';
-            dispLigneeCommentaire($lignee->getEnfantCommentaire());
-            echo'</div>';
-        
- 
-            <?=<a class="btn btn-success" href="index.php?action=commenter">commenter</a> ?>;
-            if($rangCommentaire>0)
-            {
-                <?=<button type="button" class="btn btn-warning">abusif</button> ?>;
-            }
->>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
-        }
-    }
 
-    dispLigneeCommentaire($commentaires, $modeleCommentaire);
-
-    ?>
 
 </div>
 
