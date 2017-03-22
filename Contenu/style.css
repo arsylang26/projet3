@@ -9,13 +9,8 @@ body {
     
     font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
 }
-table
-{
-border-collapse: collapse;    
-}
-td
-{
-border: 1px solid black;    
+td:hover {
+    background-color:greenyellow;
 }
 
 h1 {

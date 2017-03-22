@@ -6,19 +6,8 @@
         <link href="Contenu/bootstrap/css/bootstrap.css" rel="stylesheet">
         <script src="Contenu/TinyMCE/js/tinymce/tinymce.min.js"></script>
  		<script>tinymce.init({ selector:'textarea', language: 'fr_FR'});</script>
-           <style>
-            body
-            {
-                background-image:url("Contenu/images/fond.jpg");
-                background-size:cover;
-                
-            }
-            label
-            {
-                color: white;
-            }
-            text-color: white;
-        </style>
+        
+        
         <title><?= $titre ?></title>
     </head>
     <body>
@@ -34,5 +23,9 @@
                 <a href="index.php?action=administration">administration du site</a>
             </footer>
         </div>
+        <script src="Contenu/jquery.js"></script>
+        <script src="Contenu/script.js"></script>
+      
+       
     </body>
 </html>

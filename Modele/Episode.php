@@ -2,10 +2,10 @@
 require_once 'Modele/Modele.php';
 class Episode extends Modele
 {
-// Renvoie la liste des épisodes du blog
+// Renvoie la liste de l'ensemble des épisodes
     public function getEpisodes()
     {
-        $sql = 'select id, date_episode as date, titre, contenu from episodes order by id desc';
+        $sql = 'select id, DATE_FORMAT(date_episode,\'le %d/%m/%Y à %Hh%i\') as date, titre, SUBSTRING(contenu,1,50) AS contenu from episodes order by id desc';// 50 premiers caracteres de contenu
         $episodes = $this->executerRequete($sql);
         return $episodes;
     }
@@ -14,7 +14,7 @@ class Episode extends Modele
 // Renvoie les informations sur un épisode
     public function getEpisode($idEpisode)
     {
-        $sql = 'select id, date_episode as date , titre, contenu from episodes  where id=?';
+        $sql = 'select id, DATE_FORMAT(date_episode,\'le %d/%m/%Y à %Hh%i\') as date, titre, contenu from episodes  where id=?';
         $episode = $this->executerRequete($sql, array($idEpisode));
         if ($episode->rowCount() == 1)
         {

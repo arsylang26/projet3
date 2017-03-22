@@ -17,14 +17,14 @@ class ControleurEpisode
         $episode = $this->episode->getEpisode($idEpisode);
         $commentaires = $this->commentaire->getCommentaires($idEpisode);
         $vue = new Vue("Episode");
-        $vue->generer(array('episode' => $episode, 'commentaires' => $commentaires));
+        $vue->generer(array('episode' => $episode, 'commentaires' => $commentaires, 'modeleCommentaire'=>$this->$commentaires)); // a comprendre
     }
     // Ajoute un commentaire à un épisode
-    public function commenter($date, $auteur, $contenu, $idEpisode,$rangCommentaire,$parentCommentaire)
+    public function commenterEpisode($date, $auteur, $contenu, $idEpisode,$rangCommentaire,$parentCommentaire)
     {
         // Sauvegarde du commentaire
 
-        $this->commentaire->ajouterCommentaire($date, $auteur, $contenu, $idEpisode,$rangCommentaire,$parentCommentaire);
+        $this->commentaire->ajouterCommentaire($date, $auteur, $contenu, $idEpisode,$rangCommentaire,$parentCommentaire);// le rang=0 parent=id
         // Actualisation de l'affichage du billet
         $this->episode($idEpisode);
     }
