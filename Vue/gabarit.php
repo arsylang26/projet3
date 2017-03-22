@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="Contenu/style.css" />
         <link href="Contenu/bootstrap/css/bootstrap.css" rel="stylesheet">
         <script src="Contenu/TinyMCE/js/tinymce/tinymce.min.js"></script>
- 		<script>tinymce.init({ selector:'textarea', language: 'fr_FR'});</script>
+ 		<script>tinymce.init({ selector:'textarea.tiny', language: 'fr_FR'});</script>
         
         
         <title><?= $titre ?></title>
@@ -24,7 +24,7 @@
             </footer>
         </div>
         <script src="Contenu/jquery.js"></script>
-        <script src="Contenu/script.js"></script>
+     <script src="Contenu/bootstrap/js/bootstrap.js"></script>
       
        
     </body>

@@ -3,14 +3,14 @@ html, body {
 }
 
 body {
-    color: white;
-    background-image : url("Contenu/images/fond.jpg");
+
+    background-image : url("../Contenu/images/fond.jpg");
     background-size: cover;
     
     font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
 }
 td:hover {
-    background-color:greenyellow;
+    background-color: greenyellow;
 }
 
 h1 {
@@ -45,4 +45,7 @@ h1 {
 
 #txtCommentaire {
     width: 50%;
+}
+.commentaire_enfant{
+    padding-left: 50px;
 }

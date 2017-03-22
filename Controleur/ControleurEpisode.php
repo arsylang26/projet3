@@ -17,7 +17,7 @@ class ControleurEpisode
         $episode = $this->episode->getEpisode($idEpisode);
         $commentaires = $this->commentaire->getCommentaires($idEpisode);
         $vue = new Vue("Episode");
-        $vue->generer(array('episode' => $episode, 'commentaires' => $commentaires, 'modeleCommentaire'=>$this->$commentaires)); // a comprendre
+        $vue->generer(array('episode' => $episode, 'commentaires' => $commentaires, 'modeleCommentaire'=>$this->commentaire)); // a comprendre
     }
     // Ajoute un commentaire à un épisode
     public function commenterEpisode($date, $auteur, $contenu, $idEpisode,$rangCommentaire,$parentCommentaire)

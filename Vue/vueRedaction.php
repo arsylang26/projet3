@@ -7,7 +7,7 @@
  
             <div class ="form-group">
                 <label for="episode">Votre texte :</label>
-                <textarea  class="form-control"  name="episode" rows = "20" required ></textarea>
+                <textarea  class="form-control tiny" name="episode" rows = "20" required ></textarea>
             </div>
             
  			<button  type="submit" class="btn btn-success center-block" >valider</button>
