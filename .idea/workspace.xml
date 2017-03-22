@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91e5ec72-9758-418e-bdf6-ec6cd424f6c2" name="Default" comment="">
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Contenu/style.css" afterPath="$PROJECT_DIR$/Contenu/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controleur/ControleurAdministration.php" afterPath="$PROJECT_DIR$/Controleur/ControleurAdministration.php" />
@@ -13,6 +14,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/vueAdministration.php" afterPath="$PROJECT_DIR$/Vue/vueAdministration.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/vueEpisode.php" afterPath="$PROJECT_DIR$/Vue/vueEpisode.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/vueRedaction.php" afterPath="$PROJECT_DIR$/Vue/vueRedaction.php" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controleur/ControleurAdministration.php" afterPath="$PROJECT_DIR$/Controleur/ControleurAdministration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controleur/Routeur.php" afterPath="$PROJECT_DIR$/Controleur/Routeur.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Modele/Commentaire.php" afterPath="$PROJECT_DIR$/Modele/Commentaire.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/vueAdministration.php" afterPath="$PROJECT_DIR$/Vue/vueAdministration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/vueEpisode.php" afterPath="$PROJECT_DIR$/Vue/vueEpisode.php" />
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,6 +43,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="vueAbusif.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue/vueAbusif.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -46,6 +55,21 @@
                 <marker date="1490111342000" expanded="true" signature="297:381" ph="..." />
                 <marker date="1490111342000" expanded="true" signature="394:487" ph="..." />
                 <marker date="1490111342000" expanded="true" signature="766:1008" ph="..." />
+=======
+      <file leaf-file-name="Commentaire.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Modele/Commentaire.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="64" column="5" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+              <folding>
+                <marker date="1489505208000" expanded="true" signature="204:215" ph="select id, d... " />
+                <marker date="1489505208000" expanded="true" signature="1227:1287" ph="SELECT rang_... commentaires" />
+                <marker date="1489505208000" expanded="true" signature="1387:1451" ph="SELECT paren... commentaires" />
+                <marker date="1489505208000" expanded="true" signature="1899:1948" ph="DELETE FROM " />
+                <marker date="1489505208000" expanded="true" signature="2157:2192" ph="DELETE FROM " />
+                <marker date="1489505208000" expanded="true" signature="2385:2531" ph="SELECT id, d... " />
+                <marker date="1489505208000" expanded="true" signature="2832:2987" ph="SELECT id, d... " />
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
               </folding>
             </state>
           </provider>
@@ -76,8 +100,13 @@
       <file leaf-file-name="vueRedaction.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue/vueRedaction.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="221">
               <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+=======
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
               <folding />
             </state>
           </provider>
@@ -86,6 +115,7 @@
       <file leaf-file-name="vueEpisode.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vue/vueEpisode.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="238">
               <caret line="26" column="106" lean-forward="false" selection-start-line="26" selection-start-column="106" selection-end-line="26" selection-end-column="106" />
               <folding>
@@ -95,6 +125,11 @@
                 <marker date="1490133793675" expanded="true" signature="1584:1783" ph="..." />
                 <marker date="1490133793675" expanded="true" signature="1720:1756" ph="..." />
               </folding>
+=======
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
             </state>
           </provider>
         </entry>
@@ -102,9 +137,21 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Contenu/style.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="323">
               <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
               <folding />
+=======
+            <state relative-caret-position="544">
+              <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="37" />
+              <folding>
+                <marker date="1488958996000" expanded="true" signature="168:246" ph="select id, d... " />
+                <marker date="1488958996000" expanded="true" signature="452:526" ph="select id, d... " />
+                <marker date="1488958996000" expanded="true" signature="962:1027" ph="insert into episodes... " />
+                <marker date="1488958996000" expanded="true" signature="1259:1290" ph="DELETE FROM " />
+                <marker date="1488958996000" expanded="true" signature="1500:1561" ph="UPDATE episo... " />
+              </folding>
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
             </state>
           </provider>
         </entry>
@@ -119,21 +166,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControleurEpisode.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controleur/ControleurEpisode.php">
+      <file leaf-file-name="Routeur.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controleur/Routeur.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="357">
               <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+=======
+            <state relative-caret-position="1377">
+              <caret line="81" column="9" lean-forward="false" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="ControleurCommentaire.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controleur/ControleurCommentaire.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
               <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+=======
+      <file leaf-file-name="ControleurCommentaire.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Controleur/ControleurCommentaire.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
               <folding />
             </state>
           </provider>
@@ -176,6 +236,10 @@
         <option value="$PROJECT_DIR$/Modele/Administration.php" />
         <option value="$PROJECT_DIR$/Vue/vueAdministration.php" />
         <option value="$PROJECT_DIR$/Vue/gabarit.php" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/Vue/vueRedaction.php" />
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
         <option value="$PROJECT_DIR$/Vue/vueCommentaire.php" />
         <option value="$PROJECT_DIR$/Vue/vueErreur.php" />
         <option value="$PROJECT_DIR$/Controleur/ControleurAccueil.php" />
@@ -183,6 +247,7 @@
         <option value="$PROJECT_DIR$/Modele/Episode.php" />
         <option value="$PROJECT_DIR$/Vue/vueCommentairesAbusifs.php" />
         <option value="$PROJECT_DIR$/Modele/Commentaire.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Controleur/ControleurCommentaire.php" />
         <option value="$PROJECT_DIR$/Vue/vueSupprAbusif.php" />
         <option value="$PROJECT_DIR$/Controleur/ControleurEpisode.php" />
@@ -191,6 +256,10 @@
         <option value="$PROJECT_DIR$/Vue/vueRedaction.php" />
         <option value="$PROJECT_DIR$/Controleur/Routeur.php" />
         <option value="$PROJECT_DIR$/Vue/vueEpisode.php" />
+=======
+        <option value="$PROJECT_DIR$/Controleur/Routeur.php" />
+        <option value="$PROJECT_DIR$/Controleur/ControleurCommentaire.php" />
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
       </list>
     </option>
   </component>
@@ -281,6 +350,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -400,25 +470,42 @@
       <workItem from="1488228301668" duration="1474000" />
       <workItem from="1488917060510" duration="5150000" />
       <workItem from="1489090000854" duration="23704000" />
+<<<<<<< HEAD
       <workItem from="1489512652448" duration="11821000" />
       <workItem from="1489830328165" duration="5613000" />
       <workItem from="1490130907258" duration="2906000" />
+=======
+      <workItem from="1489512652448" duration="1018000" />
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="68146000" />
+=======
+    <option name="totallyTimeSpent" value="48824000" />
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16932908" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.017777778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.036741216" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16613418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.017777778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -464,6 +551,43 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/Controleur/Routeur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/ControleurAdministration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/Commentaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding>
+            <marker date="1489505208000" expanded="true" signature="204:215" ph="select id, d... " />
+            <marker date="1489505208000" expanded="true" signature="1227:1287" ph="SELECT rang_... commentaires" />
+            <marker date="1489505208000" expanded="true" signature="1387:1451" ph="SELECT paren... commentaires" />
+            <marker date="1489505208000" expanded="true" signature="1899:1948" ph="DELETE FROM " />
+            <marker date="1489505208000" expanded="true" signature="2157:2192" ph="DELETE FROM " />
+            <marker date="1489505208000" expanded="true" signature="2385:2531" ph="SELECT id, d... " />
+            <marker date="1489505208000" expanded="true" signature="2832:2987" ph="SELECT id, d... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/Vue.php" />
+    <entry file="file://$PROJECT_DIR$/Vue/gabarit.php" />
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
     <entry file="file://$PROJECT_DIR$/Modele/Episode.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -509,7 +633,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+<<<<<<< HEAD
           <folding />
+=======
+          <folding>
+            <marker date="1489505208000" expanded="true" signature="204:215" ph="select id, d... " />
+            <marker date="1489505208000" expanded="true" signature="1227:1287" ph="SELECT rang_... commentaires" />
+            <marker date="1489505208000" expanded="true" signature="1387:1451" ph="SELECT paren... commentaires" />
+            <marker date="1489505208000" expanded="true" signature="1899:1948" ph="DELETE FROM " />
+            <marker date="1489505208000" expanded="true" signature="2157:2192" ph="DELETE FROM " />
+            <marker date="1489505208000" expanded="true" signature="2385:2531" ph="SELECT id, d... " />
+            <marker date="1489505208000" expanded="true" signature="2832:2987" ph="SELECT id, d... " />
+          </folding>
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
         </state>
       </provider>
     </entry>
@@ -551,7 +687,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+<<<<<<< HEAD
           <folding />
+=======
+          <folding>
+            <marker date="1489505208000" expanded="true" signature="204:215" ph="select id, d... " />
+            <marker date="1489505208000" expanded="true" signature="1227:1287" ph="SELECT rang_... commentaires" />
+            <marker date="1489505208000" expanded="true" signature="1387:1451" ph="SELECT paren... commentaires" />
+            <marker date="1489505208000" expanded="true" signature="1899:1948" ph="DELETE FROM " />
+            <marker date="1489505208000" expanded="true" signature="2157:2192" ph="DELETE FROM " />
+            <marker date="1489505208000" expanded="true" signature="2385:2531" ph="SELECT id, d... " />
+            <marker date="1489505208000" expanded="true" signature="2832:2987" ph="SELECT id, d... " />
+          </folding>
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
         </state>
       </provider>
     </entry>
@@ -658,6 +806,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Contenu/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -666,6 +815,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
     <entry file="file://$PROJECT_DIR$/Controleur/ControleurEpisode.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -676,8 +827,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/vueAbusif.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="527">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+=======
+        <state relative-caret-position="544">
+          <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="37" />
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
           <folding>
             <marker date="1490111342000" expanded="true" signature="163:487" ph="..." />
             <marker date="1490111342000" expanded="true" signature="279:487" ph="..." />
@@ -722,16 +878,32 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Controleur/ControleurCommentaire.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/Vue/vueCommentairesAbusifs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/vueEpisode.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/vueEpisode.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="238">
           <caret line="26" column="106" lean-forward="false" selection-start-line="26" selection-start-column="106" selection-end-line="26" selection-end-column="106" />
           <folding>
@@ -740,7 +912,35 @@
             <marker date="1490133793675" expanded="true" signature="1390:1539" ph="..." />
             <marker date="1490133793675" expanded="true" signature="1584:1783" ph="..." />
             <marker date="1490133793675" expanded="true" signature="1720:1756" ph="..." />
+=======
+        <state relative-caret-position="714">
+          <caret line="64" column="5" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+          <folding>
+            <marker date="1489505208000" expanded="true" signature="204:215" ph="select id, d... " />
+            <marker date="1489505208000" expanded="true" signature="1227:1287" ph="SELECT rang_... commentaires" />
+            <marker date="1489505208000" expanded="true" signature="1387:1451" ph="SELECT paren... commentaires" />
+            <marker date="1489505208000" expanded="true" signature="1899:1948" ph="DELETE FROM " />
+            <marker date="1489505208000" expanded="true" signature="2157:2192" ph="DELETE FROM " />
+            <marker date="1489505208000" expanded="true" signature="2385:2531" ph="SELECT id, d... " />
+            <marker date="1489505208000" expanded="true" signature="2832:2987" ph="SELECT id, d... " />
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/Routeur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="81" column="9" lean-forward="false" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/ControleurCommentaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

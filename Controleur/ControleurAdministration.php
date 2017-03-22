@@ -57,9 +57,21 @@ class ControleurAdministration
         $vue = new Vue("SupprAbusif");
         $vue->generer(array('commentaires' => $commentaireAbusif));
     }
+<<<<<<< HEAD
     
     public function adminEpisode()
         $vue = new Vue("AdminEpisode");
         $vue->generer(array());
     }
+=======
+    public function modifEpisode($id)
+    {
+        
+    }
+    public function supprEpisode($id)
+    {
+        
+    }
+
+>>>>>>> 77f8cc349b68da912e622bd605b8687debbb702a
 }
