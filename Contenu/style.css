@@ -1,5 +1,6 @@
 html, body {
-    height: 100%;
+  height: 100%;
+
 }
 
 body {
@@ -13,6 +14,19 @@ td:hover {
     background-color: greenyellow;
 }
 
+.episode_contenu, .commentaire_contenu {
+border: 1px blue solid;
+background-color:white;
+padding:10px;
+font-size:1.3em;
+
+}
+
+.episode_titre{
+text-align:center;
+color:green;
+}
+
 h1 {
     color: white;
 }
@@ -23,7 +37,7 @@ h1 {
 
 #global {
     
-    min-height: 100%;  /* 100% de la hauteur du view-port*/
+ min-height: 100%; /* 100% de la hauteur du view-port*/
     background: silver;
     width: 75%;
     margin: auto;	/* Permet de centrer la div */
@@ -32,11 +46,11 @@ h1 {
 }
 
 #contenu {
-    margin-bottom : 30px;
+    margin-bottom : 20px;
 }
-
-#titreBlog, footer {
+footer, .bienvenue {
     text-align: center;
+
 }
 
 #titreReponses {
@@ -47,5 +61,10 @@ h1 {
     width: 50%;
 }
 .commentaire_enfant{
-    padding-left: 50px;
+    padding-left: 30px;
+}
+
+.commentaire_form, .commentaire_affich{
+margin-bottom:20px;
+width:80%;
 }

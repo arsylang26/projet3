@@ -6,7 +6,7 @@ class Commentaire extends Modele
     // Renvoie la liste des commentaires associés à un billet
     public function getCommentaires($idEpisode)
     {
-        $sql = 'SELECT id, DATE_FORMAT(date_commentaire,\'le %d/%m/%Y à %Hh%i\') AS date, auteur,contenu,rang_commentaire, parent_commentaire FROM commentaires WHERE id_episode=?';
+        $sql = 'SELECT id, DATE_FORMAT(date_commentaire,\'Le %d/%m/%Y à %Hh%i\') AS date, auteur,contenu,rang_commentaire as rang, parent_commentaire as parent FROM commentaires WHERE id_episode=?';
         $commentaires = $this->executerRequete($sql, array($idEpisode));
         return $commentaires;
     }
@@ -15,7 +15,7 @@ class Commentaire extends Modele
     public function ajouterCommentaire($auteur, $contenu, $idEpisode, $rangCommentaire, $parentCommentaire)
     {
         if ($rangCommentaire <= 3) {
-            $sql = 'INSERT INTO commentaires(date_commentaire, auteur, contenu, id_episode,rang_commentaire,parent_commentaire)'
+            $sql = 'INSERT INTO commentaires(date_commentaire AS date, auteur, contenu, id_episode,rang_commentaire AS rang,parent_commentaire AS  parent)'
                 . ' VALUES(?, ?, ?, ?, ?, ?)';
             $date = date("Y-m-d H:i:s");  // Récupère la date courante
             $this->executerRequete($sql, array($date, $auteur, $contenu, $idEpisode, $rangCommentaire, $parentCommentaire));
@@ -25,8 +25,7 @@ class Commentaire extends Modele
     // Suppression du commentaire et de ses enfants
     public function delCommentaire($idCommentaire)
     {
-        //$sql = 'DELETE FROM commentaires WHERE id=?';
-       // $this->executerRequete($sql, array($idCommentaire));
+        
 
 
         $ids = implode(",", $_POST['id_delete']);
@@ -55,7 +54,7 @@ class Commentaire extends Modele
         return $commentairesAbusifs;
     }
 
-// renvoie les enfants d'un commentaire initial (niveau 0) classés par niveau pour l'affichage
+// renvoie les enfants d'un commentaire initial (rang= 0) classés par niveau pour l'affichage
     public
     function getEnfantCommentaire($idParentCommentaire)
     {

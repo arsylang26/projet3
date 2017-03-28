@@ -5,7 +5,7 @@ class Episode extends Modele
 // Renvoie la liste de l'ensemble des épisodes
     public function getEpisodes()
     {
-        $sql = 'select id, DATE_FORMAT(date_episode,\'le %d/%m/%Y à %Hh%i\') as date, titre, SUBSTRING(contenu,1,50) AS contenu from episodes order by id desc';// 50 premiers caracteres de contenu
+        $sql = 'select id, DATE_FORMAT(date_episode,\'le %d/%m/%Y à %Hh%i\') as date, titre, SUBSTRING(contenu,1,250) AS contenu from episodes order by id desc';// 250 premiers caracteres de contenu
         $episodes = $this->executerRequete($sql);
         return $episodes;
     }

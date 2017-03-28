@@ -12,8 +12,8 @@
     </head>
     <body>
         <div id="global">
-            <header>
-                <a href="index.php"><h1 id="titreBlog">Billet simple pour l'Alaska</h1></a>
+            <header class="bienvenue">
+                <a href="index.php"><h1>Billet simple pour l'Alaska</h1></a>
                 <p>Bienvenue sur le livre en ligne de Jean Forteroche.</p>
             </header>
             <div id="contenu">

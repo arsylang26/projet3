@@ -27,6 +27,6 @@ class ControleurCommentaire
     {
         $abusifs=$this->commentaire->getCommentairesAbusifs();
         $vue = new vue("Abusif");
-        $vue->generer(array('abusifs'=>$abusifs));
+        $vue->generer(array('abusifs'=>$commentairesAbusifs));
     }
 }
