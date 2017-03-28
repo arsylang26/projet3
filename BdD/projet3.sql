@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 23 Mars 2017 à 18:38
+-- Généré le :  Mar 28 Mars 2017 à 20:01
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -45,12 +45,13 @@ INSERT INTO `commentaires` (`id`, `date_commentaire`, `auteur`, `contenu`, `id_e
 (1, '2017-02-09 12:12:34', 'Fabien', 'ceci est un commentaire élogieux', 1, 0, NULL, 0),
 (2, '2017-03-02 00:00:00', 'inconnu', 'bof', 1, 0, NULL, 0),
 (3, '2017-03-04 13:00:00', 'anne onyme', 'peut mieux faire', 2, 0, NULL, 0),
-(4, '2017-03-09 20:11:20', 'dff', '<p>sdd</p>', 1, 0, NULL, 0),
-(5, '2017-03-09 20:15:31', 'dff', '<p>sdd</p>', 1, 0, NULL, 0),
-(6, '2017-03-09 20:15:46', 'jaja', '<p>ffff</p>', 1, 0, NULL, 0),
-(7, '2017-03-09 20:16:31', 'jaja', '<p>ffff</p>', 1, 0, NULL, 0),
-(8, '2017-03-09 20:16:47', 'fifo', '<p>tttrt</p>', 1, 0, NULL, 0),
-(9, '2017-03-23 07:00:00', 'sébastien', 'hjlopmkl', 1, 1, 1, 0);
+(4, '2017-03-09 20:11:20', 'dff', 'pas mal', 1, 0, NULL, 0),
+(5, '2017-03-09 20:15:31', 'dff', 'c\'est pas trop mal', 1, 0, NULL, 0),
+(6, '2017-03-09 20:15:46', 'jaja', 'pfff !!!', 1, 0, NULL, 0),
+(7, '2017-03-09 20:16:31', 'jaja', 'Grrrrrr !', 1, 0, NULL, 0),
+(8, '2017-03-09 20:16:47', 'fifo', 'au secours !', 1, 1, 7, 0),
+(9, '2017-03-23 07:00:00', 'sébastien', 'on peut le dire...', 1, 2, 8, 0),
+(10, '2017-03-28 22:00:00', 'inconnu', 'troisième commentaire', 1, 3, 9, 0);
 
 -- --------------------------------------------------------
 
@@ -99,7 +100,7 @@ ALTER TABLE `episodes`
 -- AUTO_INCREMENT pour la table `commentaires`
 --
 ALTER TABLE `commentaires`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT pour la table `episodes`
 --
