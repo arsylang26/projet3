@@ -12,8 +12,14 @@ class ControleurCommentaire
     }
     
 
-    public function commenterCommentaire($auteur,$contenu,$idEpisode,$rangCommentaire,$parentCommentaire)
+    public function commenter($auteur,$contenu,$idEpisode,$parentCommentaire=null)
     {
+        if (!$parentCommentaire) {
+            $rangCommentaire=0;
+        }
+        else {
+
+        }
         $this->commentaire->ajouterCommentaire($auteur,$contenu,$idEpisode,$rangCommentaire,$parentCommentaire);
     
     }

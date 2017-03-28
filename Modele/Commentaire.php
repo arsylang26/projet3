@@ -58,7 +58,7 @@ class Commentaire extends Modele
     public
     function getEnfantCommentaire($idParentCommentaire)
     {
-        $sql = 'SELECT id, date_commentaire AS date, auteur, contenu, rang_commentaire AS rang, parent_commentaire AS parent FROM commentaires WHERE parent_commentaire=? ORDER BY rang';
+        $sql = 'SELECT id, DATE_FORMAT(date_commentaire,\'Le %d/%m/%Y à %Hh%i\') AS date, auteur, contenu, rang_commentaire AS rang, parent_commentaire AS parent FROM commentaires WHERE parent_commentaire=? ORDER BY rang';
         $enfantCommentaire = $this->executerRequete($sql, array($idParentCommentaire));
         return $enfantCommentaire;
     }
