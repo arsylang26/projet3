@@ -65,8 +65,7 @@ class Routeur
 
                     case 'commenterCommentaire': //pour commenter un commentaire (le commentaire initial, celui de l'épisode à le rang 0)
                         $auteur = $this->getParametre($_POST, 'auteur');
-                        $contenu = $this->getParametre($_POST, 'contenu');
-                        $rangCommentaire = $this->getParametre($_POST, 'rang'); // 0=initial(de l'épisode) / 1=commentaire du commentaire 0 / 2=du commentaire de rang 1/ 3=du commentaire de rang 2
+                        $contenu = $this->getParametre($_POST, 'contenu');//ajouter idEpisode
                         $parentCommentaire = $this->getParametre($_POST, 'parent');//id du commentaire de rang 0
                         $this->ctrlCommentaire->commenter($auteur, $contenu, $idEpisode, $parentCommentaire);
                         break;

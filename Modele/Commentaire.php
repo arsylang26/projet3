@@ -15,7 +15,7 @@ class Commentaire extends Modele
     public function ajouterCommentaire($auteur, $contenu, $idEpisode, $rangCommentaire, $parentCommentaire)
     {
         if ($rangCommentaire <= 3) {
-            $sql = 'INSERT INTO commentaires(date_commentaire AS date, auteur, contenu, id_episode,rang_commentaire AS rang,parent_commentaire AS  parent)'
+            $sql = 'INSERT INTO commentaires(date_commentaire , auteur, contenu, id_episode, rang_commentaire ,parent_commentaire)'
                 . ' VALUES(?, ?, ?, ?, ?, ?)';
             $date = date("Y-m-d H:i:s");  // Récupère la date courante
             $this->executerRequete($sql, array($date, $auteur, $contenu, $idEpisode, $rangCommentaire, $parentCommentaire));
@@ -25,7 +25,6 @@ class Commentaire extends Modele
     // Suppression du commentaire et de ses enfants
     public function delCommentaire($idCommentaire)
     {
-        
 
 
         $ids = implode(",", $_POST['id_delete']);

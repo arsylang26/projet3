@@ -17,7 +17,15 @@ class ControleurCommentaire
         if (!$parentCommentaire) {
             $rangCommentaire=0;
         }
-        else {
+        else {//$rangCommentaire=modeleCommentaire
+            $parent=$this->commentaire->getCommentaire($parentCommentaire);
+            if ($parent){
+                $rangCommentaire=$parentCommentaire['rang_commentaire']+1;
+
+            }
+            else{
+                //redirection vers erreur
+            }
 
         }
         $this->commentaire->ajouterCommentaire($auteur,$contenu,$idEpisode,$rangCommentaire,$parentCommentaire);
