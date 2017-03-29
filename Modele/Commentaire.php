@@ -6,9 +6,16 @@ class Commentaire extends Modele
     // Renvoie la liste des commentaires associés à un billet
     public function getCommentaires($idEpisode)
     {
-        $sql = 'SELECT id, DATE_FORMAT(date_commentaire,\'Le %d/%m/%Y à %Hh%i\') AS date, auteur,contenu,rang_commentaire as rang, parent_commentaire as parent FROM commentaires WHERE id_episode=?';
+        $sql = 'SELECT id, DATE_FORMAT(date_commentaire,\'Le %d/%m/%Y à %Hh%i\') AS date, auteur,contenu,rang_commentaire AS rang, parent_commentaire AS parent FROM commentaires WHERE id_episode=?';
         $commentaires = $this->executerRequete($sql, array($idEpisode));
         return $commentaires;
+    }
+
+    public function getCommentaire($idCommentaire)
+    {
+        $sql = 'SELECT id,DATE_FORMAT(date_commentaire,\'Le %d/%m/%Y à %Hh%i\') AS date,auteur,contenu,rang_commentaire AS rang, parent_commentaire AS parent FROM commentaires WHERE id_episode=?';
+        $commentaire = $this->executerRequete($sql, array($idCommentaire));
+        return $commentaire;
     }
 
     // Ajoute un commentaire dans la BdD

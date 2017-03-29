@@ -14,20 +14,29 @@ class ControleurCommentaire
 
     public function commenter($auteur,$contenu,$idEpisode,$parentCommentaire=null)
     {
-        if (!$parentCommentaire) {
-            $rangCommentaire=0;
-        }
-        else {//$rangCommentaire=modeleCommentaire
-            $parent=$this->commentaire->getCommentaire($parentCommentaire);
-            if ($parent){
-                $rangCommentaire=$parentCommentaire['rang_commentaire']+1;
+        try
+        {
+            if (!$parentCommentaire) {
+                $rangCommentaire = 0; // c'est le commentaire de l'épisode
+            } else {                  // sinon c'est un commenatire de commentaire
+                $parent = $this->commentaire->getCommentaire($parentCommentaire); //on va chercher le parent
+                if ($parent && $parentCommentaire['rang_commentaire'] < 3) {                                                    // s'il existe on définit le rang du commentaire comme futur parent
+                    $rangCommentaire = $parentCommentaire['rang_commentaire'] + 1;
+
+                } else {
+                    throw new exception ("erreur dans le rang du commentaire");
+            }
 
             }
-            else{
-                //redirection vers erreur
-            }
-
         }
+        catch
+        (Exception $e)
+        {
+            $this->erreur($e->getMessage());
+        }
+       // finally{
+
+       // }
         $this->commentaire->ajouterCommentaire($auteur,$contenu,$idEpisode,$rangCommentaire,$parentCommentaire);
     
     }

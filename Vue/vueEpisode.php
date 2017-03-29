@@ -49,10 +49,7 @@
                     }
                     ?>
                     <!-- bouton de signalement des abusifs qui lève, au clic, un modal de confirmation -->
-                    <button type="button" class="btn-xs btn-danger" data-toggle="modal"
-                            data-target="#abusif_<?= $lignee['id'] ?>">
-                        abusif
-                    </button>
+                    <button type="button" class="btn-xs btn-danger" data-toggle="modal" data-target="#abusif_<?= $lignee['id'] ?>">abusif</button>
                     <div id="abusif_<?= $lignee['id'] ?>" class="modal fade" tabindex="-1" role="dialog"
                          aria-labelledby="abusif"
                          aria-hidden="true">
