@@ -18,7 +18,7 @@ class ControleurCommentaire
         {
             if (!$parentCommentaire) {
                 $rangCommentaire = 0; // c'est le commentaire de l'épisode
-            } else {                  // sinon c'est un commenatire de commentaire
+            } else {                  // sinon c'est un commentaire de commentaire
                 $parent = $this->commentaire->getCommentaire($parentCommentaire); //on va chercher le parent
                 if ($parent && $parentCommentaire['rang_commentaire'] < 3) {     // s'il existe on définit le rang du commentaire comme futur parent
                     $rangCommentaire = $parentCommentaire['rang_commentaire'] + 1;
