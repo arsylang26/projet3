@@ -1,10 +1,10 @@
 <?php $this->titre = "Alaska - " . $episode['titre']; ?>
 <article>
     <header>
-        <h1 class="episode_titre"><?= $episode['titre'] ?></h1>
+        <h1 class="episode_titre"><?= htmlspecialchars($episode['titre']) ?></h1>
         <p class="episode_titre">Rédigé <?= $episode['date'] ?></p>
     </header>
-    <p class="episode_contenu"><?= $episode['contenu'] ?></p>
+    <p class="episode_contenu"><?= htmlspecialchars($episode['contenu']) ?></p>
     <button type="button" class="btn-xs btn-info" data-toggle="collapse" data-target="#commentaire_form_episode">
         commenter
     </button>
@@ -30,7 +30,7 @@
 <hr/>
 <header>
     <?php
-    echo '<h1 id="titreReponses">Réponses à : ' . $episode['titre'] . '</h1>';
+    echo '<h1 id="titreReponses">Réponses à : ' . htmlspecialchars($episode['titre']) . '</h1>';
     ?>
 </header>
 <article>
@@ -40,8 +40,8 @@
         {
             foreach ($commentaires as $lignee) { ?>
                 <div class="commentaire_affich">
-                    <p><?= $lignee['date'] ?> , <strong><?= $lignee['auteur'] ?></strong> a dit : </p>
-                    <p class="commentaire_contenu"><?= $lignee['contenu'] ?></p>
+                    <p><?= $lignee['date'] ?> , <strong><?= htmlspecialchars($lignee['auteur']) ?></strong> a dit : </p>
+                    <p class="commentaire_contenu"><?= htmlspecialchars($lignee['contenu']) ?></p>
                     <?php
                     if ($lignee['rang'] < 3) {
                         echo '<button type = "button" class="btn-xs btn-primary" data-toggle = "collapse"
@@ -50,7 +50,7 @@
                     ?>
                     <!-- bouton de signalement des abusifs qui lève, au clic, un modal de confirmation -->
                     <button type="button" class="btn-xs btn-danger" data-toggle="modal" data-target="#abusif_<?= $lignee['id'] ?>">abusif</button>
-                    <div id="abusif_<?= $lignee['id'] ?>" class="modal fade" tabindex="-1" role="dialog"
+                    <div id="abusif_<?= $lignee['id'] ?>" class="modal fade" tabindex="-3" role="dialog"
                          aria-labelledby="abusif"
                          aria-hidden="true">
                         <form method="post" action="index.php?action=signalerAbusif">
@@ -76,7 +76,7 @@
                     <div class="commentaire_form collapse" id="commentaire_form_<?= $lignee['id'] ?>">
                         <form method="post" action="index.php?action=commenterCommentaire">
                             <div class="form-group">
-                                <p>votre commentaire</p>
+                              <legend>votre commentaire:</legend>
                             </div>
                             <div class="form-group">
                                 <input id="auteur" name="auteur" type="text" placeholder="Votre pseudo" maxlength="10"

@@ -22,8 +22,8 @@
 
                 echo '<tr> 
           <td>' . $abusif['date'] . '</td>
-          <td>' . $abusif['auteur'] . '</td>
-          <td>' . $abusif['contenu'] . '</td>
+          <td>' . htmlspecialchars($abusif['auteur']) . '</td>
+          <td>' . htmlspecialchars($abusif['contenu']) . '</td>
           <td><input type="checkbox" name="id_del[]" value="' . $abusif['id'] . '" /></td>
           </tr>';
             endforeach;

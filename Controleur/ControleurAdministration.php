@@ -63,4 +63,10 @@ class ControleurAdministration
         $vue = new Vue("Accueil");
         $vue->generer(array());
     }
+    
+    public function connectAdmin($admin,$pwd)
+    {
+      
+        
+    }
 }

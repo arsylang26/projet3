@@ -92,6 +92,12 @@ class Routeur
                     case 'gestionEpisode': //gère l'affichage des épisodes en mode administration 
                         $this->ctrlAdministration->adminEpisode();
                         break;
+                        
+                    case 'connexion':
+                        $admin=$this->getParametre($_POST,'admin');
+                        $pwd=$this->getParametre($_POST,'pwd');
+                        $this->ctrlAdministration->connectAdmin($admin,$pwd);
+                        break;
 
                     default:
                         throw new Exception("Action non valide");
