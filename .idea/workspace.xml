@@ -30,7 +30,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="51" column="88" lean-forward="false" selection-start-line="51" selection-start-column="88" selection-end-line="51" selection-end-column="88" />
-              <folding />
+              <folding>
+                <marker date="1490897135186" expanded="true" signature="4432:5686" ph="..." />
+                <marker date="1490897135186" expanded="true" signature="4432:5697" ph="{...}" />
+                <marker date="1490897135186" expanded="true" signature="4520:4734" ph="..." />
+                <marker date="1490897135186" expanded="true" signature="4640:4699" ph="..." />
+                <marker date="1490897135186" expanded="true" signature="4787:5017" ph="..." />
+                <marker date="1490897135186" expanded="true" signature="4887:4982" ph="..." />
+                <marker date="1490897135186" expanded="true" signature="5505:5643" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -40,16 +48,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
               <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1490897135164" expanded="true" signature="883:1161" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vueAdministration.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="vueAdministration.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vue/vueAdministration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -59,8 +69,17 @@
         <entry file="file://$PROJECT_DIR$/Controleur/Routeur.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="691">
-              <caret line="105" column="28" lean-forward="false" selection-start-line="102" selection-start-column="7" selection-end-line="106" selection-end-column="13" />
-              <folding />
+              <caret line="111" column="28" lean-forward="false" selection-start-line="108" selection-start-column="7" selection-end-line="112" selection-end-column="13" />
+              <folding>
+                <marker date="1490897135156" expanded="true" signature="761:5159" ph="{...}" />
+                <marker date="1490897135156" expanded="true" signature="781:5034" ph="..." />
+                <marker date="1490897135156" expanded="true" signature="823:4905" ph="..." />
+                <marker date="1490897135156" expanded="true" signature="866:4891" ph="..." />
+                <marker date="1490897135156" expanded="true" signature="4808:4874" ph="..." />
+                <marker date="1490897135156" expanded="true" signature="4913:5024" ph="..." />
+                <marker date="1490897135156" expanded="true" signature="5076:5153" ph="{...}" />
+                <marker date="1490897135156" expanded="true" signature="5226:5329" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,17 +88,17 @@
         <entry file="file://$PROJECT_DIR$/Controleur/ControleurAdministration.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1105">
-              <caret line="65" column="1" lean-forward="false" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
+              <caret line="71" column="1" lean-forward="false" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControleurCommentaire.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ControleurCommentaire.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controleur/ControleurCommentaire.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="9" lean-forward="false" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+            <state relative-caret-position="340">
+              <caret line="20" column="64" lean-forward="false" selection-start-line="20" selection-start-column="64" selection-end-line="20" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -170,7 +189,6 @@
         <option value="$PROJECT_DIR$/Contenu/script.js" />
         <option value="$PROJECT_DIR$/Vue/vueAbusif.php" />
         <option value="$PROJECT_DIR$/Vue/vueSupprAbusif.php" />
-        <option value="$PROJECT_DIR$/Vue/vueAdministration.php" />
         <option value="$PROJECT_DIR$/Controleur/ControleurAdministration.php" />
         <option value="$PROJECT_DIR$/Modele/Episode.php" />
         <option value="$PROJECT_DIR$/Controleur/ControleurEpisode.php" />
@@ -179,6 +197,7 @@
         <option value="$PROJECT_DIR$/Modele/Commentaire.php" />
         <option value="$PROJECT_DIR$/Controleur/Routeur.php" />
         <option value="$PROJECT_DIR$/Controleur/ControleurCommentaire.php" />
+        <option value="$PROJECT_DIR$/Vue/vueAdministration.php" />
       </list>
     </option>
   </component>
@@ -196,8 +215,9 @@
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Problems" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -428,16 +448,31 @@
       <option name="project" value="LOCAL" />
       <updated>1490820186561</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="modification de la fonction commenter pour les commentaires">
+      <created>1490898324556</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1490898324556</updated>
+    </task>
+    <task id="LOCAL-00003" summary="modif vue admin">
+      <created>1490898437160</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1490898437160</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98577000" />
+    <option name="totallyTimeSpent" value="99664000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17838125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17838125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -486,7 +521,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="modification de la fonction commenter pour les commentaires" />
-    <option name="LAST_COMMIT_MESSAGE" value="modification de la fonction commenter pour les commentaires" />
+    <MESSAGE value="modif vue admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="modif vue admin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -497,7 +533,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
+          <folding>
+            <marker date="1490897135156" expanded="true" signature="761:5159" ph="{...}" />
+            <marker date="1490897135156" expanded="true" signature="781:5034" ph="..." />
+            <marker date="1490897135156" expanded="true" signature="823:4905" ph="..." />
+            <marker date="1490897135156" expanded="true" signature="866:4891" ph="..." />
+            <marker date="1490897135156" expanded="true" signature="4808:4874" ph="..." />
+            <marker date="1490897135156" expanded="true" signature="4913:5024" ph="..." />
+            <marker date="1490897135156" expanded="true" signature="5076:5153" ph="{...}" />
+            <marker date="1490897135156" expanded="true" signature="5226:5329" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -708,14 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/vueAbusif.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vue/vueSupprAbusif.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -724,18 +761,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/vueAdministration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controleur/ControleurAdministration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1105">
-          <caret line="65" column="1" lean-forward="false" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
+          <caret line="71" column="1" lean-forward="false" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -768,7 +797,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="51" column="88" lean-forward="false" selection-start-line="51" selection-start-column="88" selection-end-line="51" selection-end-column="88" />
-          <folding />
+          <folding>
+            <marker date="1490897135186" expanded="true" signature="4432:5686" ph="..." />
+            <marker date="1490897135186" expanded="true" signature="4432:5697" ph="{...}" />
+            <marker date="1490897135186" expanded="true" signature="4520:4734" ph="..." />
+            <marker date="1490897135186" expanded="true" signature="4640:4699" ph="..." />
+            <marker date="1490897135186" expanded="true" signature="4787:5017" ph="..." />
+            <marker date="1490897135186" expanded="true" signature="4887:4982" ph="..." />
+            <marker date="1490897135186" expanded="true" signature="5505:5643" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -793,15 +830,42 @@
     <entry file="file://$PROJECT_DIR$/Controleur/Routeur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="691">
-          <caret line="105" column="28" lean-forward="false" selection-start-line="102" selection-start-column="7" selection-end-line="106" selection-end-column="13" />
-          <folding />
+          <caret line="111" column="28" lean-forward="false" selection-start-line="108" selection-start-column="7" selection-end-line="112" selection-end-column="13" />
+          <folding>
+            <marker date="1490897135156" expanded="true" signature="761:5159" ph="{...}" />
+            <marker date="1490897135156" expanded="true" signature="781:5034" ph="..." />
+            <marker date="1490897135156" expanded="true" signature="823:4905" ph="..." />
+            <marker date="1490897135156" expanded="true" signature="866:4891" ph="..." />
+            <marker date="1490897135156" expanded="true" signature="4808:4874" ph="..." />
+            <marker date="1490897135156" expanded="true" signature="4913:5024" ph="..." />
+            <marker date="1490897135156" expanded="true" signature="5076:5153" ph="{...}" />
+            <marker date="1490897135156" expanded="true" signature="5226:5329" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controleur/ControleurCommentaire.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="9" lean-forward="false" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        <state relative-caret-position="340">
+          <caret line="20" column="64" lean-forward="false" selection-start-line="20" selection-start-column="64" selection-end-line="20" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/vueAbusif.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1490897135164" expanded="true" signature="883:1161" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/vueAdministration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding />
         </state>
       </provider>
