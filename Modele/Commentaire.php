@@ -47,7 +47,7 @@ class Commentaire extends Modele
     public
     function signCommentaireAbusif($idCommentaire)
     {
-        $sql = 'UPDATE commentaires SET abusif=1 WHERE id=?';
+        $sql = 'UPDATE commentaires SET abusif=abusif+1 WHERE id=?';
         $this->executerRequete($sql, array($idCommentaire));
     }
 
@@ -60,7 +60,7 @@ class Commentaire extends Modele
         return $commentairesAbusifs;
     }
 
-// renvoie les enfants d'un commentaire initial (rang= 0) classés par niveau pour l'affichage
+// renvoie les enfants d'un commentaire  classés par niveau pour l'affichage (le parent du commentaire est le commentaire de rang immédiatement inférieur)
     public
     function getEnfantCommentaire($idParentCommentaire)
     {

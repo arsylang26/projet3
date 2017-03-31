@@ -2,6 +2,7 @@
 require_once 'Modele/Commentaire.php';
 require_once 'Modele/Episode.php';
 require_once 'Vue/Vue.php';
+
 class ControleurCommentaire
 {
     private $commentaire;
@@ -38,7 +39,7 @@ class ControleurCommentaire
 
        // }
         $this->commentaire->ajouterCommentaire($auteur,$contenu,$idEpisode,$rangCommentaire,$parentCommentaire);
-    
+   header('location:index.php');
     }
     
     public function signalerAbusif($idCommentaire)

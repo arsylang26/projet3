@@ -83,9 +83,8 @@
                                        autofocus required/>
                             </div>
                             <div class="form-group">
-                        <textarea id="txtCommentaire" name="contenu" rows="4" class="form-control"
-                                  maxlength="140" required>
-                        </textarea>
+                        <textarea  id="txtCommentaire" name="contenu" rows="4" placeholder="Votre commentaire"
+                         maxlength="140" required></textarea>
                             </div>
                             <input type="hidden" name="rang" value="'. $lignee['rang'].'"/>
                             <input type="hidden" name="parent" value="'. $lignee['parent'] .'"/>
@@ -93,6 +92,7 @@
                             <button class="btn-xs btn-warning" type="reset">Annuler</button>
                         </form>
                     </div>
+                    <!-- fonction récursive pour obtenir les enfants de commentaires-->
                     <div class="commentaire_enfant">
                         <?php dispLigneeCommentaire($modele->getEnfantCommentaire($lignee['id']), $modele); ?>
                     </div>
