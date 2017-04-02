@@ -5,20 +5,22 @@ html, body {
 
 body {
 
+   
     background-image : url("../Contenu/images/fond.jpg");
     background-size: cover;
     
-    font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
+   /* font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;*/
 }
 td:hover {
     background-color: greenyellow;
 }
 
 .episode_contenu, .commentaire_contenu {
+font-family: 'Jim Nightshade', cursive;
 border: 1px blue solid;
 background-color:white;
 padding:10px;
-font-size:1.3em;
+font-size:1.5em;
 
 }
 
@@ -47,6 +49,7 @@ h1 {
 
 #contenu {
     margin-bottom : 20px;
+    
 }
 footer, .bienvenue {
     text-align: center;
@@ -66,5 +69,10 @@ footer, .bienvenue {
 
 .commentaire_form, .commentaire_affich{
 margin-bottom:20px;
-width:80%;
+width:100vh;
+}
+.admin{
+    margin-top:300px;
+
+   
 }
