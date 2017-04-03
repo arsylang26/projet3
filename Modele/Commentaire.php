@@ -10,10 +10,10 @@ class Commentaire extends Modele
         $commentaires = $this->executerRequete($sql, array($idEpisode));
         return $commentaires;
     }
-
+ // renvoie le commentaire demandé
     public function getCommentaire($idCommentaire)
     {
-        $sql = 'SELECT id,DATE_FORMAT(date_commentaire,\'Le %d/%m/%Y à %Hh%i\') AS date,auteur,contenu,rang_commentaire AS rang, parent_commentaire AS parent FROM commentaires WHERE id_episode=?';
+        $sql = 'SELECT id,DATE_FORMAT(date_commentaire,\'Le %d/%m/%Y à %Hh%i\') AS date,auteur,contenu,rang_commentaire AS rang, parent_commentaire AS parent FROM commentaires WHERE id=?';
         $commentaire = $this->executerRequete($sql, array($idCommentaire));
         return $commentaire;
     }

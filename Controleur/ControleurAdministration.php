@@ -23,7 +23,7 @@ class ControleurAdministration
     }
 
 
-    public function creerEpisode($titre = null, $contenu = null) // affiche TinyMCE pour l'édition
+    public function creerEpisode($titre = null, $contenu = null)
     {
         if ($titre && $contenu) {
             $this->episode->recEpisode($titre, $contenu);
