@@ -7,7 +7,7 @@ class ControleurAdministration
 {
     private $episode;
     private $commentaire;
-    private $commentaireAbusif;
+
 
     public function __construct()
     {
@@ -23,7 +23,7 @@ class ControleurAdministration
     }
 
 
-    public function creerEpisode($titre = null, $contenu = null) // affiche TinyMCE pour l'édition
+    public function creerEpisode($titre = null, $contenu = null)
     {
         if ($titre && $contenu) {
             $this->episode->recEpisode($titre, $contenu);
@@ -39,18 +39,21 @@ class ControleurAdministration
         $vue = new Vue("Abusif");
         $vue->generer(array('commentaires' => $commentairesAbusifs));
     }
+
     public function modifEpisode($id)
     {
         $modEpisode= $this->episode->modEpisode($id);
         $vue = new Vue("Redaction");
         $vue->generer(array('episodes' => $modEpisode));
     }
+
     public function supprEpisode($id)
     {
         $supprEpisode = $this->episode->delEpisode($id);
         $vue = new Vue("SupprEpisode");
         $vue->generer(array('episodes' => $supprEpisode));
     }
+
     public function supprCommentaire($id)
     {
         $commentaireAbusif = $this->commentaire->delCommentaire($id);
@@ -67,6 +70,8 @@ class ControleurAdministration
     public function connectAdmin($admin,$pwd)
     {
       
-        
+        //verifier les champs admin pwd ouvrir $session verifier que tout est ok et
+        $vue= new Vue("connectAdmin");
+        $vue->generer(array());
     }
 }

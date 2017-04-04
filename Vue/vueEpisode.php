@@ -19,9 +19,9 @@
             </div>
             <div class="form-group">
                         <textarea id="txtCommentaire" name="contenu" rows="4" placeholder="Votre commentaire"
-                         maxlength="140" required></textarea>
+                                  maxlength="140" required></textarea>
             </div>
-            <input type="hidden" name="id" value="<?= $episode['id']?>"/>
+            <input type="hidden" name="id" value="<?= $episode['id'] ?>"/>
             <button class="btn-xs btn-success" type="submit">Envoyer</button>
             <button class="btn-xs btn-warning" type="reset">Annuler</button>
         </form>
@@ -49,7 +49,9 @@
                     }
                     ?>
                     <!-- bouton de signalement des abusifs qui lève, au clic, un modal de confirmation -->
-                    <button type="button" class="btn-xs btn-danger" data-toggle="modal" data-target="#abusif_<?= $lignee['id'] ?>">abusif</button>
+                    <button type="button" class="btn-xs btn-danger" data-toggle="modal"
+                            data-target="#abusif_<?= $lignee['id'] ?>">abusif
+                    </button>
                     <div id="abusif_<?= $lignee['id'] ?>" class="modal fade" tabindex="-3" role="dialog"
                          aria-labelledby="abusif"
                          aria-hidden="true">
@@ -75,17 +77,18 @@
                     <div class="commentaire_form collapse" id="commentaire_form_<?= $lignee['id'] ?>">
                         <form method="post" action="index.php?action=commenterCommentaire">
                             <div class="form-group">
-                              <legend>votre commentaire:</legend>
+                                <legend>votre commentaire:</legend>
                             </div>
                             <div class="form-group">
                                 <input id="auteur" name="auteur" type="text" placeholder="Votre pseudo" maxlength="10"
                                        autofocus required/>
                             </div>
                             <div class="form-group">
-                        <textarea  id="txtCommentaire" name="contenu" rows="4" placeholder="Votre commentaire"
-                         maxlength="140" required></textarea>
+                        <textarea id="txtCommentaire" name="contenu" rows="4" placeholder="Votre commentaire"
+                                  maxlength="140" required></textarea>
                             </div>
-                            <input type="hidden" name="rang" value="'. $lignee['rang'].'"/>
+                            <!--<input type="hidden" name="rang" value="'. $lignee['rang'].'"/>-->
+                            <input type="hidden" name="id_episode" value=".$episode['id'].'"/>
                             <input type="hidden" name="parent" value="'. $lignee['parent'] .'"/>
                             <button class="btn-xs btn-success" type="submit">Envoyer</button>
                             <button class="btn-xs btn-warning" type="reset">Annuler</button>
@@ -101,6 +104,6 @@
 
         ?>
         <!-- affichage en décalé des niveaux de commentaires avec possibilité de commenter le commentaire ou de le signaler comme abusif-->
-        <?php  dispLigneeCommentaire($commentaires, $modeleCommentaire); ?>
+        <?php dispLigneeCommentaire($commentaires, $modeleCommentaire); ?>
     </div>
 </article>

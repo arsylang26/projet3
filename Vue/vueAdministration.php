@@ -1,6 +1,7 @@
-<div class="container">
-    <div class="row">
-        <form method="post" role="form" class="col-lg-5" action="index.php?action=connexion">
+
+<div class="admin col-lg-4 col-lg-offset-4">
+
+        <form method="post" role="form"  action="index.php?action=connexion">
             <fieldset>
                 <legend>Connexion à l'administration du site</legend>
                 <div class="form-group">
@@ -14,19 +15,19 @@
                 </div>
             </fieldset>
         </form>
-    </div>
+
 </div>
 
 
-<div class="col-lg-offset-4 col-lg-4">
+<!--<div class="col-lg-offset-4 col-lg-4">
     <!--
     <a type="button" class="btn btn-primary btn-sm btn-block" href="index.php?action=creerEpisode">écrire un épisode</a>
     <a type="button" class="btn btn-primary btn-sm btn-block" href="index.php?action=supprEpisode">supprimer un épisode</a>
     <a type="button" class="btn btn-primary btn-sm btn-block" href="index.php?action=modifEpisode">modifier un épisode</a>
-    -->
+
     <a type="button" class="btn btn-primary btn-sm btn-block" href="index.php?action=gestionEpisode">gérer les
         épisodes</a>
     <a type="button" class="btn btn-primary btn-sm btn-block" href="index.php?action=supprCommentaire">supprimer
         commentaires abusifs</a>
 
-</div>
+</div>-->
