@@ -15,12 +15,12 @@ class ControleurCommentaire
 
     public function commenter($auteur,$contenu,$idEpisode,$parentCommentaire=null)
     {
-        try
-        {
-            if (!$parentCommentaire) {
+     try
+      {
+            if (!$parentCommentaire) { //s'il était null alors
                 $rangCommentaire = 0; // c'est le commentaire de l'épisode
             } else {                  // sinon c'est un commentaire de commentaire
-                $parent = $this->commentaire->getCommentaire($parentCommentaire); //on va chercher le parent
+                $parent = $this->commentaire->getCommentaire($parentCommentaire)->fetch(); //on va chercher le parent
                 if ($parent && $parent['rang'] < 3) {     // s'il existe, on définit le rang du commentaire comme futur parent
                     $rangCommentaire = $parent['rang'] + 1;
 
@@ -29,17 +29,17 @@ class ControleurCommentaire
             }
 
             }
-        }
-        catch
+     }
+       catch
         (Exception $e)
-        {
-            $this->erreur($e->getMessage());
+       {
+           $this->erreur($e->getMessage());
         }
        // finally{
 
        // }
         $this->commentaire->ajouterCommentaire($auteur,$contenu,$idEpisode,$rangCommentaire,$parentCommentaire);
-  // header('location:index.php');
+
     }
     
     public function signalerAbusif($idCommentaire)

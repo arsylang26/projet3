@@ -67,7 +67,7 @@ class Routeur
                         $auteur = $this->getParametre($_POST, 'auteur');
                         $contenu = $this->getParametre($_POST, 'contenu');
                         $idEpisode = $this->getParametre($_POST,'id_episode');
-                        $parentCommentaire = $this->getParametre($_POST, 'parent');//id du commentaire de rang 0
+                        $parentCommentaire = $this->getParametre($_POST, 'parent');
                         $this->ctrlCommentaire->commenter($auteur, $contenu, $idEpisode, $parentCommentaire);
                         break;
 
@@ -88,6 +88,7 @@ class Routeur
                     case 'affichAbusif': // pour afficher la liste des commentaires abusifs
                         $id = $this->getParametre($_POST,'id');
                         $this->ctrlCommentaire->dispCommentairesAbusifs($id);
+                        break;
                         
                     case 'gestionEpisode': //gère l'affichage des épisodes en mode administration 
                         $this->ctrlAdministration->adminEpisode();
@@ -114,7 +115,7 @@ class Routeur
     }
 
     // Affiche une erreur
-    private function erreur($msgErreur)
+   public function erreur($msgErreur)
     {
         $vue = new Vue("Erreur");
         $vue->generer(array('msgErreur' => $msgErreur));

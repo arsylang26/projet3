@@ -10,10 +10,11 @@ class Commentaire extends Modele
         $commentaires = $this->executerRequete($sql, array($idEpisode));
         return $commentaires;
     }
+    
  // renvoie le commentaire demandé
     public function getCommentaire($idCommentaire)
     {
-        $sql = 'SELECT id,DATE_FORMAT(date_commentaire,\'Le %d/%m/%Y à %Hh%i\') AS date,auteur,contenu,rang_commentaire AS rang, parent_commentaire AS parent FROM commentaires WHERE id=?';
+        $sql = 'SELECT id, DATE_FORMAT(date_commentaire,\'Le %d/%m/%Y à %Hh%i\') AS date,auteur,contenu,rang_commentaire AS rang, parent_commentaire AS parent FROM commentaires WHERE id=?';
         $commentaire = $this->executerRequete($sql, array($idCommentaire));
         return $commentaire;
     }
@@ -32,8 +33,6 @@ class Commentaire extends Modele
     // Suppression du commentaire et de ses enfants
     public function delCommentaire($idCommentaire)
     {
-
-
         $ids = implode(",", $_POST['id_delete']);
         $sql = 'SELECT COUNT(*) FROM commentaires WHERE id IN(' . $ids . ')';
         $nbSuppr = $this->excuterRequete($sql, array());
@@ -44,16 +43,14 @@ class Commentaire extends Modele
     }
 
 // Signale un commentaire comme abusif
-    public
-    function signCommentaireAbusif($idCommentaire)
+    public function signCommentaireAbusif($idCommentaire)
     {
         $sql = 'UPDATE commentaires SET abusif=abusif+1 WHERE id=?';
         $this->executerRequete($sql, array($idCommentaire));
     }
 
 // renvoie les commentaires signalés comme abusifs
-    public
-    function getCommentairesAbusifs()
+    public function getCommentairesAbusifs()
     {
         $sql = 'SELECT id, date_commentaire AS date, auteur, contenu, rang_commentaire AS rang, parent_commentaire AS parent FROM commentaires WHERE abusif = 1';
         $commentairesAbusifs = $this->executerRequete($sql, array());
@@ -61,13 +58,10 @@ class Commentaire extends Modele
     }
 
 // renvoie les enfants d'un commentaire  classés par niveau pour l'affichage (le parent du commentaire est le commentaire de rang immédiatement inférieur)
-    public
-    function getEnfantCommentaire($idParentCommentaire)
+    public function getEnfantCommentaire($idParentCommentaire)
     {
         $sql = 'SELECT id, DATE_FORMAT(date_commentaire,\'Le %d/%m/%Y à %Hh%i\') AS date, auteur, contenu, rang_commentaire AS rang, parent_commentaire AS parent FROM commentaires WHERE parent_commentaire=? ORDER BY rang';
         $enfantCommentaire = $this->executerRequete($sql, array($idParentCommentaire));
         return $enfantCommentaire;
     }
-
-
 }
