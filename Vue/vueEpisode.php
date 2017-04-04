@@ -36,43 +36,25 @@
 <article>
     <div class="container">
         <!-- affichage en décalé des commentaires suivant leur rang -->
-        <?php function dispLigneeCommentaire($commentaires, $modele)
+        <?php function dispLigneeCommentaire($episode,$commentaires, $modele)
         {
             foreach ($commentaires as $lignee) { ?>
                 <div class="commentaire_affich">
                     <p><?= $lignee['date'] ?> , <strong><?= htmlspecialchars($lignee['auteur']) ?></strong> a dit : </p>
                     <p class="commentaire_contenu"><?= htmlspecialchars($lignee['contenu']) ?></p>
                     <?php
-                    if ($lignee['rang'] < 3) {
+                    if ($lignee['rang'] <3) {
                         echo '<button type = "button" class="btn-xs btn-primary" data-toggle = "collapse"
                         data-target = "#commentaire_form_' . $lignee['id'] . '">commenter</button >';
                     }
                     ?>
                     <!-- bouton de signalement des abusifs qui lève, au clic, un modal de confirmation -->
-                    <button type="button" class="btn-xs btn-danger" data-toggle="modal"
-                            data-target="#abusif_<?= $lignee['id'] ?>">abusif
-                    </button>
-                    <div id="abusif_<?= $lignee['id'] ?>" class="modal fade" tabindex="-3" role="dialog"
-                         aria-labelledby="abusif"
-                         aria-hidden="true">
-                        <form method="post" action="index.php?action=signalerAbusif">
-                            <input type="hidden" name="abusif" value="'.$lignee['id'].'">
-                        </form>
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"aria-hidden="true"></button>
-                                    <h4 class="modal-title" id="abusif">Commentaire Abusif !</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Le commentaire a été signalé comme abusif auprès du modérateur</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <form method="post" action="index.php?action=signalerAbusif">
+                        <input type="hidden" name="abusif" value="<?=$lignee['id']?>">
+
+                        <button type="submit" class="btn-xs btn-danger" >abusif</button>
+                    </form>
+
                     <!--affichage de la zone de saisie des commentaires de commentaire-->
                     <div class="commentaire_form collapse" id="commentaire_form_<?= $lignee['id'] ?>">
                         <form method="post" action="index.php?action=commenterCommentaire">
@@ -88,15 +70,15 @@
                                   maxlength="140" required></textarea>
                             </div>
                             <!--<input type="hidden" name="rang" value="'. $lignee['rang'].'"/>-->
-                            <input type="hidden" name="id_episode" value=".$episode['id'].'"/>
-                            <input type="hidden" name="parent" value="'. $lignee['parent'] .'"/>
+                            <input type="hidden" name="id_episode" value="<?=$episode['id']?>" />
+                            <input type="hidden" name="parent" value="<?= $lignee['id'] ?> "/>
                             <button class="btn-xs btn-success" type="submit">Envoyer</button>
                             <button class="btn-xs btn-warning" type="reset">Annuler</button>
                         </form>
                     </div>
                     <!-- fonction récursive pour obtenir les enfants de commentaires-->
                     <div class="commentaire_enfant">
-                        <?php dispLigneeCommentaire($modele->getEnfantCommentaire($lignee['id']), $modele); ?>
+                        <?php dispLigneeCommentaire($episode,$modele->getEnfantCommentaire($lignee['id']), $modele); ?>
                     </div>
                 </div>
             <?php }
@@ -104,6 +86,6 @@
 
         ?>
         <!-- affichage en décalé des niveaux de commentaires avec possibilité de commenter le commentaire ou de le signaler comme abusif-->
-        <?php dispLigneeCommentaire($commentaires, $modeleCommentaire); ?>
+        <?php dispLigneeCommentaire($episode,$commentaires, $modeleCommentaire); ?>
     </div>
 </article>

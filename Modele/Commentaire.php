@@ -4,10 +4,15 @@ require_once 'Modele/Modele.php';
 class Commentaire extends Modele
 {
     // Renvoie la liste des commentaires associés à un billet
-    public function getCommentaires($idEpisode)
+    public function getCommentaires($idEpisode,$rang=null)
     {
         $sql = 'SELECT id, DATE_FORMAT(date_commentaire,\'Le %d/%m/%Y à %Hh%i\') AS date, auteur,contenu,rang_commentaire AS rang, parent_commentaire AS parent FROM commentaires WHERE id_episode=?';
-        $commentaires = $this->executerRequete($sql, array($idEpisode));
+        $params=array($idEpisode);
+        if (!is_null ($rang)) {
+            $sql.=' AND rang_commentaire=?';
+            $params[]=$rang;
+        }
+        $commentaires = $this->executerRequete($sql, $params);
         return $commentaires;
     }
     

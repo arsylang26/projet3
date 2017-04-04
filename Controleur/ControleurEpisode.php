@@ -16,7 +16,7 @@ class ControleurEpisode
     public function episode($idEpisode) 
     {
         $episode = $this->episode->getEpisode($idEpisode);
-        $commentaires = $this->commentaire->getCommentaires($idEpisode);
+        $commentaires = $this->commentaire->getCommentaires($idEpisode,0);
         $vue = new Vue("Episode");
         $vue->generer(array('episode' => $episode, 'commentaires' => $commentaires, 'modeleCommentaire'=>$this->commentaire)); // a comprendre
     }
