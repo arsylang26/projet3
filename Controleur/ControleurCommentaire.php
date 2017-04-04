@@ -39,7 +39,7 @@ class ControleurCommentaire
 
        // }
         $this->commentaire->ajouterCommentaire($auteur,$contenu,$idEpisode,$rangCommentaire,$parentCommentaire);
-   header('location:index.php');
+  // header('location:index.php');
     }
     
     public function signalerAbusif($idCommentaire)
