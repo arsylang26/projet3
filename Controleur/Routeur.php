@@ -66,14 +66,15 @@ class Routeur
                     case 'commenterCommentaire': //pour commenter un commentaire (le commentaire initial, celui de l'épisode à le rang 0)
                         $auteur = $this->getParametre($_POST, 'auteur');
                         $contenu = $this->getParametre($_POST, 'contenu');
-                        $idEpisode = $this->getParametre($_POST,'id_episode');
+                        $idEpisode = $this->getParametre($_POST, 'id_episode');
                         $parentCommentaire = $this->getParametre($_POST, 'parent');
                         $this->ctrlCommentaire->commenter($auteur, $contenu, $idEpisode, $parentCommentaire);
                         break;
 
                     case 'signalerAbusif': // pour signaler un commentaire abusif
-                        $id = $this->getParametre($_POST,'id');
-                        $this->ctrlCommentaire->signCommentaireAbusif($id);
+                        $idCommentaire = $this->getParametre($_POST, 'id');
+                        $idEpisode = $this->getParametre($_POST, 'id_episode');
+                        $this->ctrlCommentaire->signalerAbusif($idEpisode, $idCommentaire);
                         break;
 
                     case 'administration': //interface privée
@@ -84,20 +85,20 @@ class Routeur
                         $id = $this->getParametre($_POST, 'id');
                         $this->ctrlAdministration->delCommentaire($id);
                         break;
-                        
+
                     case 'affichAbusif': // pour afficher la liste des commentaires abusifs
-                        $id = $this->getParametre($_POST,'id');
+                        $id = $this->getParametre($_POST, 'id');
                         $this->ctrlCommentaire->dispCommentairesAbusifs($id);
                         break;
-                        
+
                     case 'gestionEpisode': //gère l'affichage des épisodes en mode administration 
                         $this->ctrlAdministration->adminEpisode();
                         break;
-                        
+
                     case 'connexion':
-                        $admin=$this->getParametre($_POST,'admin');
-                        $pwd=$this->getParametre($_POST,'pwd');
-                        $this->ctrlAdministration->connectAdmin($admin,$pwd);
+                        $admin = $this->getParametre($_POST, 'admin');
+                        $pwd = $this->getParametre($_POST, 'pwd');
+                        $this->ctrlAdministration->connectAdmin($admin, $pwd);
                         break;
 
                     default:
@@ -106,16 +107,14 @@ class Routeur
             } else {  // aucune action définie : affichage de l'accueil
                 $this->ctrlAccueil->accueil();
             }
+        } catch
+        (Exception $e) {
+            $this->erreur($e->getMessage());
         }
-        catch
-            (Exception $e)
-            {
-                $this->erreur($e->getMessage());
-            }
     }
 
     // Affiche une erreur
-   public function erreur($msgErreur)
+    public function erreur($msgErreur)
     {
         $vue = new Vue("Erreur");
         $vue->generer(array('msgErreur' => $msgErreur));
@@ -124,10 +123,8 @@ class Routeur
     // Recherche un paramètre dans un tableau
     private function getParametre($tableau, $nom)
     {
-        if (isset($tableau[$nom]))
-        {
+        if (isset($tableau[$nom])) {
             return $tableau[$nom];
-        }
-        else  throw new Exception("Paramètre '$nom' absent");
+        } else  throw new Exception("Paramètre '$nom' absent");
     }
 }

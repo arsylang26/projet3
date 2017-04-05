@@ -13,3 +13,7 @@ $(function() {
 		return false;
 	});
 });
+// modal de confirmation de signalement d'un commentaire abusif
+$('#bouton_abusif').on('submit',function(ev) {
+    ('modal_abusif').modal('show');
+});

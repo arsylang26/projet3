@@ -6,17 +6,16 @@ require_once 'Vue/Vue.php';
 class ControleurCommentaire
 {
     private $commentaire;
-    
+
     public function __construct()
     {
         $this->commentaire = new Commentaire();
     }
-    
 
-    public function commenter($auteur,$contenu,$idEpisode,$parentCommentaire=null)
+
+    public function commenter($auteur, $contenu, $idEpisode, $parentCommentaire = null)
     {
-     try
-      {
+        try {
             if (!$parentCommentaire) { //s'il était null alors
                 $rangCommentaire = 0; // c'est le commentaire de l'épisode
             } else {                  // sinon c'est un commentaire de commentaire
@@ -28,31 +27,31 @@ class ControleurCommentaire
 
                 } else {
                     throw new exception ("erreur dans le rang du commentaire");
-            }
+                }
 
             }
-     }
-       catch
-        (Exception $e)
-       {
-           $this->erreur($e->getMessage());
+        } catch
+        (Exception $e) {
+            $this->erreur($e->getMessage());
         }
 
-        $this->commentaire->ajouterCommentaire($auteur,$contenu,$idEpisode,$rangCommentaire,$parentCommentaire);
-header("location:index.php?action=episode&id=".$idEpisode );
+        $this->commentaire->ajouterCommentaire($auteur, $contenu, $idEpisode, $rangCommentaire, $parentCommentaire);
+        header("location:index.php?action=episode&id=" . $idEpisode);
     }
-    
-    public function signalerAbusif($idCommentaire)
+
+    public function signalerAbusif($idEpisode,$idCommentaire)
     {
         $this->commentaire->signCommentaireAbusif($idCommentaire);
+        header("location:index.php?action=episode&id=" . $idEpisode);
     }
 
     public function affichAbusif()
     {
-        $abusifs=$this->commentaire->getCommentairesAbusifs();
+        $abusifs = $this->commentaire->getCommentairesAbusifs();
         $vue = new vue("Abusif");
-        $vue->generer(array('abusifs'=>$commentairesAbusifs));
+        $vue->generer(array('abusifs' => $commentairesAbusifs));
     }
+
     public function erreur($msgErreur)
     {
         $vue = new Vue("Erreur");
