@@ -19,8 +19,8 @@
         <!-- afficher les boutons d'administration uniquement dans ce mode  -jquery-->
 
 
-
-        <a type="button" class="confirm btn btn-primary btn-sm" href="<?= "index.php?action=supprEpisode&id=".$episode['id'] ?>">supprimer l'épisode</a>
+        <a type="button" class="confirm btn btn-warning btn-sm"
+           href="<?= "index.php?action=supprEpisode&id=" . $episode['id'] ?>">supprimer l'épisode</a>
 
         <a class="btn btn-primary btn-sm" href="<?= "index.php?action=modifEpisode&id=" . $episode['id'] ?>">modifier
             l'épisode</a>

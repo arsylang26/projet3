@@ -46,13 +46,17 @@ class Routeur
                         break;
 
                     case 'modifEpisode': //pour modifier un épisode
-                        $id = $this->getParametre($_POST, 'id');
-                        $this->ctrlAdministration->modEpisode($id);
+                        $idEpisode = $this->getParametre($_POST, 'id');
+                        if ($idEpisode != 0) {
+                            $this->ctrlAdministration->modEpisode($idEpisode);
+                        }else throw new Exception("Identifiant de l'épisode non valide");
                         break;
 
                     case 'supprEpisode': //pour effacement épisode et commentaires afférants
-                        $id = $this->getParametre($_POST, 'id');
-                        $this->ctrlAdministration->delEpisode($id);
+                        $idEpisode = $this->getParametre($_POST, 'id');
+                        if ($idEpisode != 0) {
+                            $this->ctrlAdministration->delEpisode($idEpisode);
+                        } else throw new Exception("Identifiant de l'épisode non valide");
                         break;
 
                     case 'commenterEpisode': //pour commenter un épisode
@@ -114,17 +118,19 @@ class Routeur
     }
 
     // Affiche une erreur
-    public function erreur($msgErreur)
-    {
-        $vue = new Vue("Erreur");
-        $vue->generer(array('msgErreur' => $msgErreur));
-    }
 
-    // Recherche un paramètre dans un tableau
     private function getParametre($tableau, $nom)
     {
         if (isset($tableau[$nom])) {
             return $tableau[$nom];
         } else  throw new Exception("Paramètre '$nom' absent");
+    }
+
+    // Recherche un paramètre dans un tableau
+
+    public function erreur($msgErreur)
+    {
+        $vue = new Vue("Erreur");
+        $vue->generer(array('msgErreur' => $msgErreur));
     }
 }

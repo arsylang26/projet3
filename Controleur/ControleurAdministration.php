@@ -2,6 +2,7 @@
 require_once 'Modele/Episode.php';
 require_once 'Modele/Commentaire.php';
 require_once 'Vue/Vue.php';
+require_once 'Controleur/ControleurEpisode.php';
 
 class ControleurAdministration
 {
@@ -23,13 +24,17 @@ class ControleurAdministration
     }
 
 
-    public function creerEpisode($titre = null, $contenu = null)
+    public function creerEpisode($titre = null, $contenu = null,$modif=null,$id=null)
     {
-        if ($titre && $contenu) {
+        if ($titre && $contenu && !$modif) {
             $this->episode->recEpisode($titre, $contenu);
+        }
+        if ($titre && $contenu && $modif){
+            $this->episode->modEpisode($id);
         }
         $vue = new Vue("Redaction");
         $vue->generer(array());
+       // header("location:index.php?vueAccueil");
     }
 
 
@@ -42,10 +47,12 @@ class ControleurAdministration
 
     public function modifEpisode($id)
     {
-        $modEpisode= $this->episode->modEpisode($id);
+        $episode=$this->episode->getEpisode($id);
+       // $modEpisode= $this->episode->modEpisode($id);
         $modif=1;
-        $vue = new Vue("Redaction");
-        $vue->generer(array('episodes' => $modEpisode));
+        $this->creerEpisode(null,null,$modif,$id);
+        //$vue->generer(array('episodes' => $modEpisode));
+       // header("location:index.php?vueAccueil");
     }
 
     public function supprEpisode($id)

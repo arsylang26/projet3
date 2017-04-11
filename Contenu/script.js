@@ -18,11 +18,11 @@ $(function() {
    // ('modal_abusif').modal('show');
 //});
 
-tinymce.init({selector: 'textarea.tiny', language: 'fr_FR'});
+//tinymce.init({selector: 'textarea.tiny', language: 'fr_FR'});
  //cocher toutes les checkboxes des abusifs
 $('#tousAbusifs').click($(":checkbox").attr('checked',true));
 
-$(".confirmation").confirm();
+$(".confirm").confirm();
 /*!
  * jquery.confirm
  *
