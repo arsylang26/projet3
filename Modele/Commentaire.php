@@ -38,13 +38,13 @@ class Commentaire extends Modele
     // Suppression du commentaire et de ses enfants
     public function delCommentaire($idCommentaire)
     {
-        $ids = implode(",", $_POST['id_delete']);
+        $ids = implode(",",array_map('intval',$_POST['id_del']));
         $sql = 'SELECT COUNT(*) FROM commentaires WHERE id IN(' . $ids . ')';
         $nbSuppr = $this->excuterRequete($sql, array());
         $sql = 'SELECT COUNT(*) FROM commentaires WHERE abusif=1';
         $nbTotalAbusif = $this->executerRequete($sql, array());
         $sql = 'DELETE FROM commentaires WHERE id IN(' . $ids . ')';
-        $this->executerRequete($sql, array());
+        $this->executerRequete($sql, array($idCommentaire));
     }
 
 // Signale un commentaire comme abusif
@@ -57,7 +57,7 @@ class Commentaire extends Modele
 // renvoie les commentaires signalés comme abusifs
     public function getCommentairesAbusifs()
     {
-        $sql = 'SELECT id, date_commentaire AS date, auteur, contenu, rang_commentaire AS rang, parent_commentaire AS parent FROM commentaires WHERE abusif = 1';
+        $sql = 'SELECT id, date_commentaire AS date, auteur, contenu, rang_commentaire AS rang, parent_commentaire AS parent FROM commentaires WHERE abusif >= 1';
         $commentairesAbusifs = $this->executerRequete($sql, array());
         return $commentairesAbusifs;
     }

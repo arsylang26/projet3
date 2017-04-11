@@ -33,16 +33,17 @@ class ControleurAdministration
     }
 
 
-    public function affichAbusif($id)
+    public function affichAbusif()
     {
         $commentairesAbusifs = $this->commentaire->getCommentairesAbusifs();
         $vue = new Vue("Abusif");
-        $vue->generer(array('commentaires' => $commentairesAbusifs));
+        $vue->generer(array());
     }
 
     public function modifEpisode($id)
     {
         $modEpisode= $this->episode->modEpisode($id);
+        $modif=1;
         $vue = new Vue("Redaction");
         $vue->generer(array('episodes' => $modEpisode));
     }
@@ -60,13 +61,7 @@ class ControleurAdministration
         $vue = new Vue("SupprAbusif");
         $vue->generer(array('commentaires' => $commentaireAbusif));
     }
-    
-    public function adminEpisode()
-    {
-        $vue = new Vue("Accueil");
-        $vue->generer(array());
-    }
-    
+
     public function connectAdmin($admin,$pwd)
     {
       

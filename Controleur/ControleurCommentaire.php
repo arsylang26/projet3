@@ -47,7 +47,7 @@ class ControleurCommentaire
 
     public function affichAbusif()
     {
-        $abusifs = $this->commentaire->getCommentairesAbusifs();
+        $commentairesAbusifs = $this->commentaire->getCommentairesAbusifs();
         $vue = new vue("Abusif");
         $vue->generer(array('abusifs' => $commentairesAbusifs));
     }

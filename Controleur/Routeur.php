@@ -39,9 +39,9 @@ class Routeur
                         if (isset ($_POST['titre'])) {
                             $titre = $this->getParametre($_POST, 'titre');
                             $contenu = $this->getParametre($_POST, 'contenu');
-                            $this->ctrlAdministration->recEpisode($titre, $contenu);
+                            $this->ctrlAdministration->creerEpisode($titre, $contenu);
                         } else {
-                            $this->ctrlAdministration->recEpisode();
+                            $this->ctrlAdministration->creerEpisode();
                         }
                         break;
 
@@ -63,7 +63,7 @@ class Routeur
                         $this->ctrlCommentaire->commenter($auteur, $contenu, $idEpisode);
                         break;
 
-                    case 'commenterCommentaire': //pour commenter un commentaire (le commentaire initial, celui de l'épisode à le rang 0)
+                    case 'commenterCommentaire': //pour commenter un commentaire (le commentaire initial, celui de l'épisode, à le rang 0)
                         $auteur = $this->getParametre($_POST, 'auteur');
                         $contenu = $this->getParametre($_POST, 'contenu');
                         $idEpisode = $this->getParametre($_POST, 'id_episode');
@@ -82,13 +82,13 @@ class Routeur
                         break;
 
                     case 'supprCommentaire'://pour supprimer un commentaire et ses enfants( sous-commentaires)
-                        $id = $this->getParametre($_POST, 'id');
+                        $id = $this->getParametre($_POST, 'id_del[]');
                         $this->ctrlAdministration->delCommentaire($id);
                         break;
 
                     case 'affichAbusif': // pour afficher la liste des commentaires abusifs
-                        $id = $this->getParametre($_POST, 'id');
-                        $this->ctrlCommentaire->dispCommentairesAbusifs($id);
+
+                        $this->ctrlCommentaire->affichAbusif();
                         break;
 
                     case 'gestionEpisode': //gère l'affichage des épisodes en mode administration 

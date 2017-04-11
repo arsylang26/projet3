@@ -2,7 +2,7 @@
 
 
 <section class="col-sm-8 table-responsive">
-    <form method="post" action="index.php?action=supprAbusif">
+    <form method="post" action="index.php?action=supprCommentaire">
         <table class="table table-bordered table-striped table-condensed">
             <caption>
                 commentaires signalés comme abusifs par les lecteurs
@@ -31,10 +31,14 @@
 
             <tr>
                 <td colspan="4">
-                    <button data-confirm="Êtes-vous sur de supprimer ces commentaires ?" type="submit"
-                            class="btn-xs btn-danger" data-toggle="modal"
-                            data-target="#supprCommmentaire">Supprimer les commentaires abusifs ?
-                    </button>
+                    <!--data-confirm est une fontion jquery pour la confirmation d'une action-->
+                    <button data-confirm="Êtes-vous sur de supprimer ces commentaires ?"
+                    class="btn-xs btn-danger" data-toggle="modal" type="submit" data-target="#supprAbusif">Supprimer les commentaires sélectionnés</button>
+                </td>
+                            </tr>
+            <tr>
+                <td>
+                    <button  class="btn-xs btn-default"  type="button" id="tousAbusifs">Tout sélectionner</button>
                 </td>
             </tr>
 
@@ -53,7 +57,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"
-                        aria-hidden="true"></button>
+                        aria-hidden="true">x</button>
                 <h4 class="modal-title" id="abusif">Suppression réussie</h4>
             </div>
             <div class="modal-body">
@@ -61,9 +65,10 @@
                     abusifs </p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                <a class="btn btn-danger btn-ok">Supprimer</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">annuler</button>
             </div>
 
         </div>
     </div>
-               
+</div>

@@ -76,3 +76,7 @@ width:100vh;
 
    
 }
+/* affiche les boutons commentaire et abusif sur une même ligne */
+#bouton_commenter, #bouton_abusif{
+    display:inline-block;
+}

@@ -45,29 +45,30 @@
                     <p class="commentaire_contenu"><?= htmlspecialchars($lignee['contenu']) ?></p>
                     <?php
                     if ($lignee['rang'] < 3) {
-                        echo '<button type = "button" class="btn-xs btn-primary" data-toggle = "collapse"
-                        data-target = "#commentaire_form_' . $lignee['id'] . '">commenter</button >';
+                        echo '<button id="bouton_commenter" type = "button" class="btn-xs btn-primary" data-toggle = "collapse" data-target = "#commentaire_form_' . $lignee['id'] . '">commenter</button >';
                     }
                     ?>
                     <!-- bouton de signalement des abusifs qui lève, au clic, un modal de confirmation -->
                     <form method="post" action="index.php?action=signalerAbusif" id="bouton_abusif">
                         <input type="hidden" name="id_episode" value="<?= $episode['id'] ?>"/>
                         <input type="hidden" name="id" value="<?= $lignee['id'] ?>"/>
-                        <button type="button" data-toggle="modal" href="#modal_abusif" class="btn-xs btn-danger">abusif</button>
+                        <button id="bouton_abusif" type="submit" data-toggle="modal" data-target="#modal_abusif" class="btn-xs btn-danger">
+                            abusif
+                        </button>
                     </form>
                     <!-- le modal de confirmation -->
-                    <div id="modal_abusif" class="modal" role="dialog" >
+                    <div id="modal_abusif" class="modal fade" role="dialog">
                         <div class="modal-dialog">
                             <div class="modal_content">
-
                                 <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                                    <button type="button" class="close" data-dismiss="modal">x;
                                     </button>
-                                    <h3 id="modal_titre" class="modal_title">Commentaire abusif !</h3>
+                                    <h3 class="modal_title">Commentaire abusif !</h3>
                                 </div>
                                 <div class="modal-body">
                                     le commentaire sera signalé comme abusif auprès du modérateur
                                 </div>
+
                             </div>
                         </div>
 
@@ -83,8 +84,7 @@
                                        autofocus required/>
                             </div>
                             <div class="form-group">
-                        <textarea id="txtCommentaire" name="contenu" rows="4" placeholder="Votre commentaire"
-                                  maxlength="140" required></textarea>
+                                 <textarea id="txtCommentaire" name="contenu" rows="4" placeholder="Votre commentaire" maxlength="140" required></textarea>
                             </div>
                             <input type="hidden" name="id_episode" value="<?= $episode['id'] ?>"/>
                             <input type="hidden" name="parent" value="<?= $lignee['id'] ?> "/>

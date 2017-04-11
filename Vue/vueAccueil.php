@@ -11,22 +11,21 @@
         <p class="episode_contenu"><?php
             $contenu = $episode['contenu'];
             if (strlen($contenu) > 250) {
-              $contenu = $contenu . "  ..." ;
+                $contenu = $contenu . "  ...";
 
-           }
+            }
             echo $contenu;
             ?></p>
+        <!-- afficher les boutons d'administration uniquement dans ce mode  -jquery-->
+
+
+
+        <a type="button" class="confirm btn btn-primary btn-sm" href="<?= "index.php?action=supprEpisode&id=".$episode['id'] ?>">supprimer l'épisode</a>
+
+        <a class="btn btn-primary btn-sm" href="<?= "index.php?action=modifEpisode&id=" . $episode['id'] ?>">modifier
+            l'épisode</a>
+
+
     </article>
-    <!-- afficher les boutons d'administration uniquement dans ce mode  -jquery-->
-    <div class="admin" style="display:none;">
-
-        <a type="button" class="btn btn-primary btn-sm btn-block" href="index.php?action=creerEpisode">écrire un
-            épisode</a>
-        <a type="button" class="btn btn-primary btn-sm btn-block" href="index.php?action=supprEpisode">supprimer un
-            épisode</a>
-        <a type="button" class="btn btn-primary btn-sm btn-block" href="index.php?action=modifEpisode">modifier un
-            épisode</a>
-
-    </div>
     <hr/>
 <?php endforeach; ?>
