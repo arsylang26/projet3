@@ -46,16 +46,21 @@ class Routeur
                         break;
 
                     case 'modifEpisode': //pour modifier un épisode
-                        $idEpisode = $this->getParametre($_POST, 'id');
-                        if ($idEpisode != 0) {
-                            $this->ctrlAdministration->modEpisode($idEpisode);
-                        }else throw new Exception("Identifiant de l'épisode non valide");
+                        $idEpisode = $this->getParametre($_GET, 'id');
+                        if (isset ($_POST['titre'])) {
+                            $titre = $this->getParametre($_POST, 'titre');
+                            $contenu = $this->getParametre($_POST, 'contenu');
+                            $this->ctrlAdministration->modifEpisode($idEpisode,$titre, $contenu);
+                        }
+                        else{
+                            $this->ctrlAdministration->modifEpisode($idEpisode);
+                        }
                         break;
 
                     case 'supprEpisode': //pour effacement épisode et commentaires afférants
-                        $idEpisode = $this->getParametre($_POST, 'id');
+                        $idEpisode = $this->getParametre($_GET, 'id');
                         if ($idEpisode != 0) {
-                            $this->ctrlAdministration->delEpisode($idEpisode);
+                            $this->ctrlAdministration->supprEpisode($idEpisode);
                         } else throw new Exception("Identifiant de l'épisode non valide");
                         break;
 

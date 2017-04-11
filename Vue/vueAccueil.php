@@ -8,14 +8,14 @@
             </a>
             <time><?= $episode['date'] ?></time>
         </header>
-        <p class="episode_contenu"><?php
+        <div class="episode_contenu"><?php
             $contenu = $episode['contenu'];
-            if (strlen($contenu) > 250) {
-                $contenu = $contenu . "  ...";
+           // if (strlen($contenu) > 250) {
+             //   $contenu = $contenu . "  ...";
 
-            }
+          //  }
             echo $contenu;
-            ?></p>
+            ?></div>
         <!-- afficher les boutons d'administration uniquement dans ce mode  -jquery-->
 
 

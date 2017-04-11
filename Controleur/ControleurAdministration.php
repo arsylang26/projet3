@@ -24,14 +24,12 @@ class ControleurAdministration
     }
 
 
-    public function creerEpisode($titre = null, $contenu = null,$modif=null,$id=null)
+    public function creerEpisode($titre = null, $contenu = null)
     {
-        if ($titre && $contenu && !$modif) {
+        if ($titre && $contenu) {
             $this->episode->recEpisode($titre, $contenu);
         }
-        if ($titre && $contenu && $modif){
-            $this->episode->modEpisode($id);
-        }
+
         $vue = new Vue("Redaction");
         $vue->generer(array());
        // header("location:index.php?vueAccueil");
@@ -45,21 +43,25 @@ class ControleurAdministration
         $vue->generer(array());
     }
 
-    public function modifEpisode($id)
+    public function modifEpisode($id,$titre=null,$contenu=null)
     {
         $episode=$this->episode->getEpisode($id);
+
+        if ($id && $titre && $contenu) {
+            $episode['titre']=$titre;
+            $episode['contenu']=$contenu;
+            $this->episode->modEpisode($episode);
+        }
        // $modEpisode= $this->episode->modEpisode($id);
-        $modif=1;
-        $this->creerEpisode(null,null,$modif,$id);
-        //$vue->generer(array('episodes' => $modEpisode));
+        $vue = new Vue("Modif");
+        $vue->generer(array('episode'=>$episode));
        // header("location:index.php?vueAccueil");
     }
 
     public function supprEpisode($id)
     {
         $supprEpisode = $this->episode->delEpisode($id);
-        $vue = new Vue("SupprEpisode");
-        $vue->generer(array('episodes' => $supprEpisode));
+        header("location:index.php?vueAccueil");
     }
 
     public function supprCommentaire($id)

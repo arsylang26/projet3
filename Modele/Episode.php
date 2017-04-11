@@ -40,11 +40,12 @@ class Episode extends Modele
         $this->executerRequete($sql,array($idEpisode));
     }
 // Mettre à jour un épisode
-    public function modEpisode($idEpisode,$titre,$contenu)
+    public function modEpisode($episode)
     {
         // mise à jour de l'épisode
-        $sql = 'UPDATE episodes SET titre=?, SET contenu=? WHERE id_episode=?';
-        $this->executerRequete($sql, array($titre, $contenu, $idEpisode));
+
+        $sql = 'UPDATE episodes SET titre=? , contenu=? WHERE id=?';
+        $this->executerRequete($sql, array($episode['titre'], $episode['contenu'], $episode['id']));
 
     }
 }

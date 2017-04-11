@@ -22,7 +22,7 @@ $(function() {
  //cocher toutes les checkboxes des abusifs
 $('#tousAbusifs').click($(":checkbox").attr('checked',true));
 
-$(".confirm").confirm();
+
 /*!
  * jquery.confirm
  *
@@ -202,3 +202,4 @@ $(".confirm").confirm();
         modalOptionsKeyboard: true
     }
 })(jQuery);
+$(".confirm").confirm();
