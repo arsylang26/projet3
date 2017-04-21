@@ -33,12 +33,13 @@
                 <td colspan="4">
                     <!--data-confirm est une fontion jquery pour la confirmation d'une action-->
                     <button data-confirm="Êtes-vous sur de supprimer ces commentaires ?"
-                    class="btn-xs btn-danger" data-toggle="modal" type="submit" data-target="#supprAbusif">Supprimer les commentaires sélectionnés</button>
+                            class="btn-xs btn-danger" type="submit">Supprimer les commentaires sélectionnés
+                    </button>
                 </td>
-                            </tr>
+            </tr>
             <tr>
                 <td>
-                    <button  class="btn-xs btn-default"  type="button" id="tousAbusifs">Tout sélectionner</button>
+                    <button class="btn-xs btn-default" type="button" id="tousAbusifs">Tout sélectionner</button>
                 </td>
             </tr>
 
@@ -46,29 +47,3 @@
     </form>
 
 </section>
-
-<div id="supprAbusif>" class="modal fade" tabindex="-1" role="dialog"
-     aria-labelledby="abusif"
-     aria-hidden="true">
-
-
-    <div class="modal-dialog">
-
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"
-                        aria-hidden="true">x</button>
-                <h4 class="modal-title" id="abusif">Suppression réussie</h4>
-            </div>
-            <div class="modal-body">
-                <p>$nbSuppr+ commentaires ont bien été supprimés sur + $nbTotAbusif+ commentaires signalés comme
-                    abusifs </p>
-            </div>
-            <div class="modal-footer">
-                <a class="btn btn-danger btn-ok">Supprimer</a>
-                <button type="button" class="btn btn-default" data-dismiss="modal">annuler</button>
-            </div>
-
-        </div>
-    </div>
-</div>

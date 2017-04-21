@@ -45,12 +45,6 @@ class ControleurCommentaire
         header("location:index.php?action=episode&id=" . $idEpisode);
     }
 
-    public function affichAbusif()
-    {
-        $commentairesAbusifs = $this->commentaire->getCommentairesAbusifs();
-        $vue = new vue("Abusif");
-        $vue->generer(array('abusifs' => $commentairesAbusifs));
-    }
 
     public function erreur($msgErreur)
     {

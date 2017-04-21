@@ -91,13 +91,13 @@ class Routeur
                         break;
 
                     case 'supprCommentaire'://pour supprimer un commentaire et ses enfants( sous-commentaires)
-                        $id = $this->getParametre($_POST, 'id_del[]');
-                        $this->ctrlAdministration->delCommentaire($id);
+                        $ids = $this->getParametre($_POST, 'id_del');
+                        $this->ctrlAdministration->supprCommentaire($ids);
                         break;
 
                     case 'affichAbusif': // pour afficher la liste des commentaires abusifs
 
-                        $this->ctrlCommentaire->affichAbusif();
+                        $this->ctrlAdministration->affichAbusif();
                         break;
 
                     case 'gestionEpisode': //gère l'affichage des épisodes en mode administration 
@@ -108,6 +108,10 @@ class Routeur
                         $admin = $this->getParametre($_POST, 'admin');
                         $pwd = $this->getParametre($_POST, 'pwd');
                         $this->ctrlAdministration->connectAdmin($admin, $pwd);
+                        break;
+
+                    case 'deconnexion':
+                        $this->ctrlAdministration->deconnexion();
                         break;
 
                     default:

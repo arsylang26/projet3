@@ -21,7 +21,8 @@ border: 1px blue solid;
 background-color:white;
 padding:10px;
 font-size:1.5em;
-
+margin-bottom: 10px; /* espace le bouton commenter */
+word-wrap: break-word;
 }
 
 .episode_titre{
@@ -56,12 +57,21 @@ footer, .bienvenue {
 
 }
 
+
 #titreReponses {
     font-size : 100%;
 }
 
 #txtCommentaire {
     width: 50%;
+}
+
+.connect_admin{
+
+}
+
+.deconnect_admin{
+    float:right;
 }
 .commentaire_enfant{
     padding-left: 30px;

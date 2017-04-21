@@ -40,11 +40,13 @@ class Commentaire extends Modele
     {
         $ids = implode(",",array_map('intval',$_POST['id_del']));
         $sql = 'SELECT COUNT(*) FROM commentaires WHERE id IN(' . $ids . ')';
-        $nbSuppr = $this->excuterRequete($sql, array());
+        $nbSuppr = $this->executerRequete($sql, array());
         $sql = 'SELECT COUNT(*) FROM commentaires WHERE abusif=1';
         $nbTotalAbusif = $this->executerRequete($sql, array());
         $sql = 'DELETE FROM commentaires WHERE id IN(' . $ids . ')';
         $this->executerRequete($sql, array($idCommentaire));
+        $tab=array($nbSuppr,$nbTotalAbusif);
+       return $tab;
     }
 
 // Signale un commentaire comme abusif
