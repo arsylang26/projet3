@@ -38,7 +38,7 @@
                 </td>
             </tr>
             <tr>
-                <td>
+                <td  colspan="4">
                     <button class="btn-xs btn-default" type="button" id="tousAbusifs">Tout sélectionner</button>
                 </td>
             </tr>

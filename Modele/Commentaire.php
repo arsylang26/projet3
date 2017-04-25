@@ -59,7 +59,7 @@ class Commentaire extends Modele
 // renvoie les commentaires signalés comme abusifs
     public function getCommentairesAbusifs()
     {
-        $sql = 'SELECT id, date_commentaire AS date, auteur, contenu, rang_commentaire AS rang, parent_commentaire AS parent FROM commentaires WHERE abusif >= 1';
+        $sql = 'SELECT id, DATE_FORMAT(date_commentaire,\'Le %d/%m/%Y à %Hh%i\') AS date, auteur, contenu, rang_commentaire AS rang, parent_commentaire AS parent FROM commentaires WHERE abusif >= 1';
         $commentairesAbusifs = $this->executerRequete($sql, array());
         return $commentairesAbusifs;
     }

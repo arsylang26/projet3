@@ -15,8 +15,11 @@
         <?php if (!isset($_SESSION['admin'])) : ?>
             <a class="connect_admin" href="index.php?action=administration">administration du site</a>
         <?php else : ?>
-            <p class="connect_admin">connecté en tant que <?= $_SESSION['admin'] ?></p>
-            '<a class="deconnect_admin" href="index.php?action=deconnexion">déconnexion</a>
+            <div class="connect_admin">connecté en tant que <?= $_SESSION['admin'] ?>
+        <form action="index.php?action=deconnexion" method="POST">
+            <button class="deconnect btn btn-warning" name="#" data-confirm="Vous déconnecter ?" type="submit">déconnexion</button>
+        </form>
+        </div>
         <?php endif; ?>
         <div class="bienvenue">
             <a href="index.php"><h1>Billet simple pour l'Alaska</h1></a>
@@ -47,5 +50,5 @@
 <script src="Contenu/TinyMCE/js/tinymce/tinymce.min.js"></script>
 <script>tinymce.init({selector: 'textarea.tiny', language: 'fr_FR'});</script>
 <script src="Contenu/script.js"></script>
-
+    </body>
 </html>

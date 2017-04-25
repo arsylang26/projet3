@@ -1,4 +1,4 @@
-html, body {
+﻿html, body {
   height: 100%;
 
 }
@@ -11,7 +11,7 @@ body {
     
    /* font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;*/
 }
-td:hover {
+tr:hover {
     background-color: greenyellow;
 }
 
@@ -70,8 +70,9 @@ footer, .bienvenue {
 
 }
 
-.deconnect_admin{
-    float:right;
+.deconnect{
+    padding-top:3px;
+padding-right:10px;
 }
 .commentaire_enfant{
     padding-left: 30px;
