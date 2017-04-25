@@ -32,7 +32,6 @@ class ControleurAdministration
 
             $this->episode->recEpisode($titre, $contenu);
             header("location:index.php?vueAccueil");
-
         }
 
         $vue = new Vue("Redaction");
