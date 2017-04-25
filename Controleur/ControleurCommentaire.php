@@ -19,9 +19,7 @@ class ControleurCommentaire
             if (!$parentCommentaire) { //s'il était null alors
                 $rangCommentaire = 0; // c'est le commentaire de l'épisode
             } else {                  // sinon c'est un commentaire de commentaire
-                var_dump($parentCommentaire);
                 $parent = $this->commentaire->getCommentaire($parentCommentaire)->fetch(); //on va chercher le parent
-                var_dump($parent);
                 if ($parent && $parent['rang'] < 3) {     // s'il existe, on définit le rang du commentaire comme futur parent
                     $rangCommentaire = $parent['rang'] + 1;
 

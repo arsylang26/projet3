@@ -80,11 +80,10 @@ class ControleurAdministration
     {
         if (isset($admin) && isset($pwd)) {
             $pass = sha1($pwd); //cryptage du mot de passe avant de faire la requête sur la BdD
-            $idAdmin = $this->admin->getIdAdmin($admin, $pass);
-            print_r($idAdmin);
+            $idAdmin = $this->admin->getIdAdmin($admin, $pass)->fetch();
             if ($idAdmin) {// si identifiant /pwd ok on ouvre la session admin
                 $_SESSION['admin'] = $admin;
-               // header("location:index.php");
+                header("location:index.php");
             } else {// sinon, retour à l'authentification
                 header("location:index.php?action=administration");
             }

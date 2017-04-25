@@ -15,35 +15,24 @@
             </tr>
             <!-- parcourir la liste des commentaires abusifs , les lister sous forme de tableau avec une case à cocher pour chaque commentaire
             en fin de tableau bouton supprimer avec confirmation pour supprimer la liste cochée -->
-
-            <?php
-
-            foreach ($commentairesAbusifs as $abusif):
-
-                echo '<tr> 
+            <?php foreach ($commentairesAbusifs as $abusif):
+                echo '<tr class="tab_abusif"> 
           <td>' . $abusif['date'] . '</td>
           <td>' . htmlspecialchars($abusif['auteur']) . '</td>
           <td>' . htmlspecialchars($abusif['contenu']) . '</td>
           <td><input type="checkbox" name="id_del[]" value="' . $abusif['id'] . '" /></td>
           </tr>';
-            endforeach;
-            ?>;
-
+            endforeach; ?>
             <tr>
                 <td colspan="4">
                     <!--data-confirm est une fontion jquery pour la confirmation d'une action-->
                     <button data-confirm="Êtes-vous sur de supprimer ces commentaires ?"
-                            class="btn-xs btn-danger" type="submit">Supprimer les commentaires sélectionnés
+                            class="btn btn-xs btn-danger" type="submit">Supprimer les commentaires sélectionnés
+                    </button>
+                    <button class="btn btn-xs btn-default pull-right" type="button" id="tousAbusifs">Tout sélectionner
                     </button>
                 </td>
             </tr>
-            <tr>
-                <td  colspan="4">
-                    <button class="btn-xs btn-default" type="button" id="tousAbusifs">Tout sélectionner</button>
-                </td>
-            </tr>
-
         </table>
     </form>
-
 </section>

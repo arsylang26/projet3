@@ -15,11 +15,14 @@
         <?php if (!isset($_SESSION['admin'])) : ?>
             <a class="connect_admin" href="index.php?action=administration">administration du site</a>
         <?php else : ?>
-            <div class="connect_admin">connecté en tant que <?= $_SESSION['admin'] ?>
-        <form action="index.php?action=deconnexion" method="POST">
-            <button class="deconnect btn btn-warning" name="#" data-confirm="Vous déconnecter ?" type="submit">déconnexion</button>
-        </form>
-        </div>
+            <div class="connect_admin">
+                <form action="index.php?action=deconnexion" method="POST">
+                    connecté en tant que <?= $_SESSION['admin'] ?>
+                    <button class="deconnect btn btn-warning" name="#" data-confirm="Vous déconnecter ?" type="submit">
+                        déconnexion
+                    </button>
+                </form>
+            </div>
         <?php endif; ?>
         <div class="bienvenue">
             <a href="index.php"><h1>Billet simple pour l'Alaska</h1></a>
@@ -29,11 +32,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-2 col-sm-offset-3">
-                        <a href="index.php?action=creerEpisode" class="btn-sm btn-primary"> écrire un nouvel
+                        <a href="index.php?action=creerEpisode" class="btn btn-sm btn-primary"> écrire un nouvel
                             épisode </a>
                     </div>
                     <div class="col-sm-3 col-sm-offset-2">
-                        <a href="index.php?action=affichAbusif" class="btn-sm btn-primary"> voir les commentaires
+                        <a href="index.php?action=affichAbusif" class="btn btn-sm btn-primary"> voir les commentaires
                             abusifs </a>
                     </div>
                 </div>
@@ -50,5 +53,5 @@
 <script src="Contenu/TinyMCE/js/tinymce/tinymce.min.js"></script>
 <script>tinymce.init({selector: 'textarea.tiny', language: 'fr_FR'});</script>
 <script src="Contenu/script.js"></script>
-    </body>
+</body>
 </html>

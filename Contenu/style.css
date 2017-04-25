@@ -1,33 +1,33 @@
 ﻿html, body {
-  height: 100%;
+    height: 100%;
 
 }
 
 body {
 
-   
-    background-image : url("../Contenu/images/fond.jpg");
+    background-image: url("../Contenu/images/fond.jpg");
     background-size: cover;
-    
-   /* font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;*/
+
+    /* font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;*/
 }
-tr:hover {
+
+#contenu .tab_abusif:hover {
     background-color: greenyellow;
 }
 
 .episode_contenu, .commentaire_contenu {
-font-family: 'Jim Nightshade', cursive;
-border: 1px blue solid;
-background-color:white;
-padding:10px;
-font-size:1.5em;
-margin-bottom: 10px; /* espace le bouton commenter */
-word-wrap: break-word;
+    font-family: 'Jim Nightshade', cursive;
+    border: 1px blue solid;
+    background-color: white;
+    padding: 10px;
+    font-size: 1.5em;
+    margin-bottom: 10px; /* espace le bouton commenter */
+    word-wrap: break-word;
 }
 
-.episode_titre{
-text-align:center;
-color:green;
+.episode_titre {
+    text-align: center;
+    color: green;
 }
 
 h1 {
@@ -35,59 +35,55 @@ h1 {
 }
 
 .titreBillet {
-    margin-bottom : 0px;
+    margin-bottom: 0px;
 }
 
 #global {
-    
- min-height: 100%; /* 100% de la hauteur du view-port*/
+
+    min-height: 100%; /* 100% de la hauteur du view-port*/
     background: silver;
     width: 75%;
-    margin: auto;	/* Permet de centrer la div */
+    margin: auto; /* Permet de centrer la div */
     text-align: justify;
     padding: 5px 20px;
 }
 
 #contenu {
-    margin-bottom : 20px;
-    
+    margin-bottom: 20px;
 }
+
 footer, .bienvenue {
+    clear: both;
     text-align: center;
-
 }
-
 
 #titreReponses {
-    font-size : 100%;
+    font-size: 100%;
 }
 
 #txtCommentaire {
     width: 50%;
 }
 
-.connect_admin{
-
+.deconnect {
+    float: right;
 }
 
-.deconnect{
-    padding-top:3px;
-padding-right:10px;
-}
-.commentaire_enfant{
+.commentaire_enfant {
     padding-left: 30px;
 }
 
-.commentaire_form, .commentaire_affich{
-margin-bottom:20px;
-width:100vh;
+.commentaire_form, .commentaire_affich {
+    margin-bottom: 20px;
+    width: 100vh;
 }
-.admin{
-    margin-top:300px;
 
-   
+.admin {
+    margin-top: 300px;
+
 }
+
 /* affiche les boutons commentaire et abusif sur une même ligne */
-#bouton_commenter, #bouton_abusif{
-    display:inline-block;
+#bouton_commenter, #bouton_abusif {
+    display: inline-block;
 }

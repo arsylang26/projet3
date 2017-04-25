@@ -96,21 +96,16 @@ class Routeur
                         break;
 
                     case 'affichAbusif': // pour afficher la liste des commentaires abusifs
-
                         $this->ctrlAdministration->affichAbusif();
                         break;
 
-                    case 'gestionEpisode': //gère l'affichage des épisodes en mode administration 
-                        $this->ctrlAdministration->adminEpisode();
-                        break;
-
-                    case 'connexion':
+                    case 'connexion'://pour se connecter à l'administation
                         $admin = $this->getParametre($_POST, 'admin');
                         $pwd = $this->getParametre($_POST, 'pwd');
                         $this->ctrlAdministration->connectAdmin($admin, $pwd);
                         break;
 
-                    case 'deconnexion':
+                    case 'deconnexion':// se déconnecter du back-office
                         $this->ctrlAdministration->deconnexion();
                         break;
 
